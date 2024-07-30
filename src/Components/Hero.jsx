@@ -48,7 +48,40 @@ const settings = {
 
 const Hero = () => {
 
-  
+  useEffect(() => {
+    gsap.to('.logo', {
+      duration: 0.5,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+    gsap.to('#text', {
+      duration: 0.8,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+    gsap.to('#smtext', {
+      duration: 1.3,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+    gsap.to('#button1', {
+      duration: 2.6,
+      x: 40,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+    gsap.to('#button2', {
+      duration: 2.6,
+      x: -40,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+    gsap.to('#slider', {
+      duration: 2.3,
+      y: -40,
+      ease: Power3.easeInOut
+    });
+  }, []);
   
 
   return (

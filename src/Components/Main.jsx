@@ -1,7 +1,11 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import './main.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
+import { useInView } from "react-intersection-observer";
+import {gsap} from 'gsap'
+import {TweenMax, Power3} from 'gsap'
+import { useGSAP } from '@gsap/react';
 import 'slick-carousel/slick/slick-theme.css';
 
 const logos = ['https://framerusercontent.com/images/El644u0YyJGjpMkzrL7UWypGnY.png?scale-down-to=512']; 
@@ -45,9 +49,26 @@ const settings = {
 };
 
 const Main = () => {
+
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    rootMargin: "-100px 0px",
+  });
+
+      if(inView){
+        gsap.to('#heading', {
+          duration:0.4,
+          y: -30,
+          ease: Power3.easeInOut,
+          opacity: 1,
+        });
+      }
+
+  
+
   return (
     <div className='' id='works'>
-      <div className="text-center">
+      <div ref={ref} id='heading' className={`text-center transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
         <h4 className="text-[#ADDAB2] text-[12px]">C U R A T E D &nbsp; W O R K</h4>
         <h1 className='heroheading text-4xl text-white mt-3'>Featured Case Studies</h1>
         <h5 className='text-white text-[17px]'>Compilation of case studies that evoke my sense of pride</h5>

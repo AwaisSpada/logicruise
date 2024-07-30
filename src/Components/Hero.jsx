@@ -2,10 +2,11 @@ import React, {useEffect, useRef} from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useInView } from "react-intersection-observer";
 import './hero.css'
 import Logo1 from '../assets/electron.svg'
 import {gsap} from 'gsap'
-import {TweenMax, Power3} from 'gsap'
+import {TweenMax, Power3, Power4} from 'gsap'
 import { useGSAP } from '@gsap/react';
 
 const logos = ['https://cdna.iconscout.com/img/duolingo.389f11b.svg', 'https://cdna.iconscout.com/img/uber.314ad21.svg', 'https://cdna.iconscout.com/img/microsoft.c051f44.svg', 'https://cdna.iconscout.com/img/airbnb.69a8173.svg', 'https://cdna.iconscout.com/img/google.c0129cb.svg', 'https://cdna.iconscout.com/img/amazon.90c4794.svg', 'https://cdna.iconscout.com/img/disney.042cf1c.svg', 'https://cdna.iconscout.com/img/instacart.d64c895.svg']; 
@@ -48,69 +49,80 @@ const settings = {
 
 const Hero = () => {
 
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   useEffect(() => {
-    gsap.to('.logo', {
-      duration: 0.5,
-      y: -40,
-      ease: Power3.easeInOut
+    gsap.to('#logo', {
+      duration: 1,
+      y: -30,
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
     gsap.to('#text', {
       duration: 0.8,
       y: -40,
-      ease: Power3.easeInOut
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
     gsap.to('#smtext', {
       duration: 1.3,
       y: -40,
-      ease: Power3.easeInOut
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
     gsap.to('#button1', {
       duration: 2.6,
       x: 40,
       y: -40,
-      ease: Power3.easeInOut
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
     gsap.to('#button2', {
       duration: 2.6,
       x: -40,
       y: -40,
-      ease: Power3.easeInOut
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
     gsap.to('#slider', {
-      duration: 2.3,
+      duration: 3,
       y: -40,
-      ease: Power3.easeInOut
+      ease: Power4.easeInOut,
+      opacity: 1,
     });
   }, []);
   
 
   return (
     <div className='hero w-[100%] mx-auto relative mt-36'>
-      <div className='logo flex justify-center'>
-        <div className="logodiv lg:mt-[100px] mt-[50px]">
+      <div className='flex justify-center'>
+        <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
       <img className='headlogo w-14 ml-[90px] rotate-1' src="https://framerusercontent.com/images/K87K8oWoMPCJBJmyQKbXXvzbxdA.png" alt="" />
       <h5 className='before text-white bg-[#06160A] py-3 pr-5 pl-10 rounded-2xl'>
       Available for opportunities
       </h5>
         </div>
       </div>
-      <h5 id='text' className='heroheading mt-10 text-center text-white lg:text-5xl text-3xl'>
+      <h5 id='text' className='heroheading mt-10 text-center text-white lg:text-5xl text-3xl opacity-0'>
             Welcome to <br /> my digital humble abode
         </h5>
-        <h6 id='smtext' className='text-center text-[#a0a0a0] my-5'>
+        <h6 id='smtext' className='text-center text-[#a0a0a0] my-5 opacity-0'>
             I'm an independent designer. <br /> My interest lies in brand experience, and user experience.
         </h6>
         <div  className='flex  gap-3 justify-center mt-3'>
-            <button id='button1' className="animbutton bg-white rounded-lg lg:py-2 lg:px-10 md:px-7 p-1">
+            <button id='button1' className="animbutton bg-white rounded-lg lg:py-2 lg:px-10 md:px-7 p-1 opacity-0">
             👋 Let's Talk
             </button>
-            <button id='button2' className=" bg-[#14242b] ml-20 text-white border-2 border-[#404f57] rounded-lg py-2 px-10">
+            <button id='button2' className=" bg-[#14242b] ml-20 text-white border-2 border-[#404f57] rounded-lg py-2 px-10 opacity-0">
             About US
             </button>
         </div>
 
 
-        <div id='slider' className="mx-auto w-[70%] bg-transparent">
+        <div id='slider' className="mx-auto w-[70%] bg-transparent opacity-0">
       <Slider {...settings}>
         {[...Array(8).keys()].map((_, index) => (
           <SlideItem key={index} index={index} />

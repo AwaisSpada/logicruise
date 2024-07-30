@@ -11,7 +11,7 @@ initTWE({ Collapse, Dropdown });
 const Navbar = () => {
   return (
     <div className='lg:flex justify-center mt-5 md:w-[50%] w-[50%] mx-auto sticky top-3 z-10'>
-      <div className='absolute'>
+      <div>
   {/* Main navigation container */}
   <nav className="flex-no-wrap border-[#414f57] border rounded-2xl lg:rounded-full relative flex w-full items-center justify-between py-2 shadow-dark-mild dark:bg-[#24323A] lg:flex-wrap lg:justify-start lg:py-4">
     <div className="flex w-full flex-wrap items-center justify-between px-3">

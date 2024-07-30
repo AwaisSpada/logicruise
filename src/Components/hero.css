@@ -1,0 +1,182 @@
+
+
+
+.arrowimg{
+  filter: drop-shadow(0px 0px 0.5px white);
+}
+
+
+.slideimg{
+  filter: drop-shadow(0px 0px 0.5px white);
+}
+
+.testimonial:hover{
+  scale: 1;
+  overflow: visible;
+  transition-duration: 1s;
+  transform: rotateZ(-5deg);
+  border: 2px solid #487410;
+  .cardlogo{
+    transform: scale(1.5);
+    transition: all ease 0.5s;
+  }
+}
+
+.shadowpic{
+  filter: drop-shadow(0px 0px 1px white);
+}
+
+button:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: all ease 0.3s;
+  filter: drop-shadow(0px 0px 30px white);
+  /* animation-name: buttonanim;
+  animation-duration: 1s; */
+}
+
+@keyframes buttonanim {
+  0% {
+    background-color: black;
+  }
+}
+
+
+ 
+.headlogo{
+  animation-name: example;
+  animation-duration: 1s;
+  position: absolute;
+  top: -60px;
+}
+.logodiv{
+  position: relative;
+  animation-name: divfloat;
+  animation-duration: 1s;
+}
+.headlogo:hover{
+  scale: 1.2;
+  transition: all ease 0.3s;
+}
+@keyframes example {
+  0% {
+    top: 10px;
+    width: 34px;
+  }
+}
+@keyframes divfloat {
+  0% {
+    margin-top: 100px;
+  }
+}
+
+.before::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 18.5px;
+    left: 18px;
+    opacity: 0.7;
+    position: absolute;
+    background-color: greenyellow;
+    animation-name: beforee;
+    animation-duration: 0.5;
+    animation-iteration-count: infinite;
+    -webkit-animation: 3s blink ease infinite;
+  -moz-animation: 3s blink ease infinite;
+  -ms-animation: 3s blink ease infinite;
+  -o-animation: 3s blink ease infinite;
+  animation: 2.5s blink ease infinite;
+}
+
+@-webkit-keyframes blink {
+  from, to {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.before{
+    position: relative;
+}
+.heroheading{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 65px;
+}
+@media only screen and (max-width: 765px) {
+  .heroheading{
+    line-height: 35px;
+  }
+  
+}
+.mainheading{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 40px;
+}
+nav{
+  --border-bottom-width: 0.5px;
+  --border-color: rgba(83, 80, 80, 1);
+  --border-left-width: 0.5px;
+  --border-right-width: 0.5px;
+  --border-style: solid;
+  --border-top-width: 0.5px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.986) -1px 2px 12px 0px;
+  transform: none;
+  transform-origin: 50% 50% 0px;
+  opacity: 1;}
+.card1{
+  background-size: 128px;
+  background-repeat: repeat;
+  border-radius: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 50px 20px 20px 100px;
+  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background: linear-gradient(to right, #495f5d , #313e32);
+}
+.card2{
+  background-size: 128px;
+  background-repeat: repeat;
+  border-radius: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 50px 20px 20px 100px;
+  background-image: url('https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024');
+  background: linear-gradient(to right, #495f5d , #313e32);
+}
+.card3{
+  background-size: 128px;
+  background-repeat: repeat;
+  border-radius: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 50px 20px 20px 100px;
+  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background: linear-gradient(to right, #495f5d , #313e32);
+}
+.card4{
+  background-size: 128px;
+  background-repeat: repeat;
+  border-radius: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  padding: 50px 0px 20px 100px;
+  background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
+  background: linear-gradient(to right, #495f5d , #313e32);
+}
+.footer{
+    background: linear-gradient(to right,  #122d07, #487410 );
+    box-shadow: 0px 0px 20px black;
+}

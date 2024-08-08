@@ -2,6 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Typewriter from "typewriter-effect";
 import { useInView } from "react-intersection-observer";
 import './hero.css'
 import Logo1 from '../assets/electron.svg'
@@ -22,9 +23,9 @@ const SlideItem = ({ index }) => (
 const settings = {
   dots: false,
   infinite: true,
-  speed: 2000, // Transition speed in milliseconds
+  speed: 800, // Transition speed in milliseconds
   autoplay: true, // Auto play slides
-  autoplaySpeed: 3000, // Time between slides in milliseconds
+  autoplaySpeed: 2000, // Time between slides in milliseconds
   slidesToShow: 5,
   slidesToScroll: 1,
   swipeToSlide: true,
@@ -48,11 +49,6 @@ const settings = {
 };
 
 const Hero = () => {
-
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0,
-  });
 
   useEffect(() => {
     gsap.to('#logo', {
@@ -97,32 +93,38 @@ const Hero = () => {
   
 
   return (
-    <div className='hero w-[100%] mx-auto relative mt-36'>
+    <div className='hero bg-[black]/30 w-[100%] mx-auto relative mt-[-270px]'>
       <div className='flex justify-center'>
-        <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
+        {/* <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
       <img className='headlogo w-14 ml-[90px] rotate-1' src="https://framerusercontent.com/images/K87K8oWoMPCJBJmyQKbXXvzbxdA.png" alt="" />
       <h5 className='before text-white bg-[#06160A] py-3 pr-5 pl-10 rounded-2xl'>
       Available for opportunities
       </h5>
-        </div>
+        </div> */}
       </div>
-      <h5 id='text' className='heroheading mt-10 text-center text-white lg:text-5xl text-3xl opacity-0'>
-            Welcome to <br /> my digital humble abode
+      <h5 id='text' className=' text-center text-white lg:text-6xl text-3xl opacity-0 mt-[400px]'>
+      One Stop Shop for All Your 
         </h5>
-        <h6 id='smtext' className='text-center text-[#a0a0a0] my-5 opacity-0'>
-            I'm an independent designer. <br /> My interest lies in brand experience, and user experience.
+        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[green]'>Digital Needs !</h1>
+        <h6 id='smtext' className='text-center text-[#a0a0a0] opacity-0 text-4xl'>
+        Hire Now! An Individual or a team from our talent pool for your
         </h6>
-        <div  className='flex  gap-3 justify-center mt-3'>
-            <button id='button1' className="animbutton bg-white rounded-lg lg:py-2 lg:px-10 md:px-7 p-1 opacity-0">
-            👋 Let's Talk
-            </button>
-            <button id='button2' className=" bg-[#14242b] ml-20 text-white border-2 border-[#404f57] rounded-lg py-2 px-10 opacity-0">
-            About US
-            </button>
-        </div>
-
-
-        <div id='slider' className="mx-auto w-[70%] bg-transparent opacity-0">
+        <h1 className="text-center text-3xl text-[green] font-semibold">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        'Enterprise',
+                        'Startup',
+                        'Growth Company'
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      deleteSpeed: 10,
+                    }}
+                  />
+                </h1>
+                <h2 className='text-center my-5 text-white text-xl'>The best brands choose Spadasoft</h2>
+        <div id='slider' className="mx-auto lg:w-[70%] bg-transparent opacity-0">
       <Slider {...settings}>
         {[...Array(8).keys()].map((_, index) => (
           <SlideItem key={index} index={index} />

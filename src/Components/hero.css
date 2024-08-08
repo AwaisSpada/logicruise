@@ -1,6 +1,60 @@
 
 
 
+
+
+
+
+
+
+
+
+.cardButton:focus{
+  background-color: green;
+  border-radius: 40px;
+}
+.cardButton{
+  padding: 20px 0px 20px 10px;
+  transition: all ease-in-out 0.2s;
+  max-width: 80%;
+}
+
+
+.circle-text{
+  animation-name: circletext;
+  animation-duration: 5s;
+  transition: all ease-in-out 2s;
+  animation-timing-function: inherit;
+  animation-iteration-count: infinite;
+  padding: 30px;
+  width: 30%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 10px solid white;
+    border-radius: 50%;
+}
+@media screen and (max-width: 900px) {
+  .circle-text{
+    border: none;
+    animation: none;
+    padding: 0;
+    width: 50%;
+  }
+}
+@keyframes circletext {
+  0% {
+    border: 10px solid green;
+      }
+  50% {
+    border: 10px solid rgb(56, 101, 56);
+  }
+  75% {
+    border: 10px solid green;
+    }
+  100% {
+    border: 10px solid rgb(56, 101, 56);
+    }
+}
 .arrowimg{
   filter: drop-shadow(0px 0px 0.5px white);
 }
@@ -135,7 +189,9 @@ nav{
   box-shadow: rgba(0, 0, 0, 0.986) -1px 2px 12px 0px;
   transform: none;
   transform-origin: 50% 50% 0px;
-  opacity: 1;}
+  opacity: 1;
+  z-index: 2;
+}
 .card1{
   background-size: 128px;
   background-repeat: repeat;
@@ -154,7 +210,7 @@ nav{
   border-radius: 30px;
   padding: 50px 20px 20px 100px;
   background-image: url('https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024');
-  background: linear-gradient(to right, #495f5d , #313e32);
+  background: linear-gradient(to right, #2f4e4b , #0a0c0a);
 }
 .card3{
   background-size: 128px;
@@ -164,7 +220,7 @@ nav{
   border-radius: 30px;
   padding: 50px 20px 20px 100px;
   background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
-  background: linear-gradient(to right, #495f5d , #313e32);
+  background: linear-gradient(to right, #123734 , #313e32);
 }
 .card4{
   background-size: 128px;
@@ -174,7 +230,7 @@ nav{
   border-radius: 30px;
   padding: 50px 0px 20px 100px;
   background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
-  background: linear-gradient(to right, #495f5d , #313e32);
+  background: linear-gradient(to right , #375d3a, #293837);
 }
 .footer{
     background: linear-gradient(to right,  #122d07, #487410 );

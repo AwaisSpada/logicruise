@@ -57,8 +57,16 @@ const Main = () => {
 
       if(inView){
         gsap.to('#heading', {
-          duration:0.4,
-          y: -30,
+          duration:1.5,
+          y: 30,
+          ease: Power3.easeInOut,
+          opacity: 1,
+        });
+      }
+      if(inView){
+        gsap.to('#headingcard', {
+          duration:1.5,
+          y: 30,
           ease: Power3.easeInOut,
           opacity: 1,
         });
@@ -67,14 +75,14 @@ const Main = () => {
   
 
   return (
-    <div className='' id='works'>
-      <div ref={ref} id='heading' className={`text-center transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
+    <div className='bg-[black]/30' id='works'>
+      <div ref={ref} id='heading' className={`text-center  transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
         <h4 className="text-[#ADDAB2] text-[12px]">C U R A T E D &nbsp; W O R K</h4>
         <h1 className='heroheading text-4xl text-white mt-3'>Featured Case Studies</h1>
         <h5 className='text-white text-[17px]'>Compilation of case studies that evoke my sense of pride</h5>
       </div>
-      <div className="cards mt-20">
-      <div className="card1 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] lg:w-[70%] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-2">
+      <div className="cards mt-20 relative">
+      <div id='headingcard' className={`card1 opacity-0 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] sticky top-[10px] lg:w-[70%] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-2`}>
       <div className='cardd1 lg:w-[45%] md:w-[80%] w-[100%] lg:ml-0 ml-[-60px] lg:mt-0 md:mt-0 mt-[-30px]'>
         <h6 className='text-[#ADDAB2]'>AIRBNB . 2023</h6>
         <h2 className='mainheading text-xl lg:text-3xl text-white mt-5'>Curating AR experiences while travelling</h2>
@@ -88,7 +96,7 @@ const Main = () => {
         <img className=' lg:mr-[-200px] md:mr-[-200px] md:mt-40 md:ml-0 lg:mt-0 mt-[-50px] lg:ml-0 ml-[150px]' src="https://framerusercontent.com/images/kOfIyp0iL0qysj50U1pITZMC34.png?scale-down-to=1024" alt="" />
       </div>
       </div>
-      <div className="card2 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] relative lg:w-[70%] md:w-[80%] md:flex mx-auto lg:flex justify-between mt-20">
+      <div id='headingcard' className={`card2 opacity-0 lg:h-[40vh] xl:h-[60vh] sticky top-[110px] md:h-[35vh] h-[60vh]  lg:w-[70%] md:w-[80%] md:flex mx-auto lg:flex justify-between`}>
       <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
         <h6 className='text-[#ADDAB2]'>SHOPIFY . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Building profitable dropshipping dashboard</h2>
@@ -101,7 +109,7 @@ const Main = () => {
         <img className=' top-[70px] md:mt-40 lg:w-[60%] lg:ml-0 ml-[120px] left-[700px] lg:absolute' src="https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024" alt="" />
       </div>
       </div>
-      <div className="card3 lg:w-[70%] md:w-[80%] md:h-[35vh] lg:h-[40vh] xl:h-[60vh] h-[60vh] mx-auto lg:flex md:flex justify-between mt-20">
+      <div id='headingcard' className="card3 opacity-0 lg:w-[70%] md:w-[80%] sticky top-[210px] md:h-[35vh] lg:h-[40vh] xl:h-[60vh] h-[60vh] mx-auto lg:flex md:flex justify-between">
       <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
         <h6 className='text-[#ADDAB2]'>DELLOITE . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Terrific: An app that helps you find a home tutor</h2>
@@ -113,7 +121,7 @@ const Main = () => {
         <img className=' lg:mr-[-200px] lg:mt-20 md:mt-40 lg:ml-0 md:ml-0 ml-[120px] my-[-50px]' src="https://framerusercontent.com/images/ohHTiq0PH6PnnqZsdmwKnCGWyXM.png?scale-down-to=1024" alt="" />
       </div>
       </div>
-      <div className="card4 lg:w-[70%] md:h-[35vh] lg:h-[40vh] xl:h-[60vh] h-[60vh] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-20 relative">
+      <div id='headingcard' className="card4 opacity-0 lg:w-[70%] md:h-[35vh] sticky top-[100px] lg:h-[40vh] xl:h-[60vh] h-[60vh] md:w-[80%] mx-auto lg:flex md:flex justify-between">
       <div className='cardd1 lg:ml-0 ml-[-60px] lg:mt-0 mt-[-30px]'>
         <h6 className='text-[#ADDAB2]'>HEADOUT . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Enhancing the payment flow of Headout</h2>

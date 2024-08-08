@@ -36,7 +36,7 @@ const Team = () => {
         <h5 className='text-xl font-semibold mb-20'>
             TEAM
         </h5>
-        <h1 className='heroheading text-4xl lg:w-[30%]'>
+        <h1 className='heroheading text-6xl lg:w-[80%]'>
         Meet the Spadasoft revenue revolutionaries
         </h1>
       </div>
@@ -67,15 +67,6 @@ const Team = () => {
         ))}
       </div>
     </div>
-    <div className="absolute lg:bottom-[-50px] lg:right-[310px] lg:left-0 md:left-[350px] left-[170px] flex justify-center space-x-2">
-        {cards.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-[green]' : 'bg-gray-300'}`}
-          />
-        ))}
-      </div>
     </div>
     </div>
   )

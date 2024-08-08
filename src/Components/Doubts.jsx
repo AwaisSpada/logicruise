@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // Initialization for ES Users
 import { Collapse, initTWE } from "tw-elements";
 initTWE({ Collapse });
@@ -18,7 +19,7 @@ const Doubts = () => {
       </div>
       <div className="lg:flex justify-center gap-[20px]">
         <div className="left md:w-[100%] lg:w-[30%] relative">
-          <div class="block rounded-2xl border-4 border-[#2d3b46] p-8 bg-[#0C1821] shadow-secondary-1 dark:bg-surface-dark">
+          <div class="block rounded-2xl border-4 border-[#2d3b46] p-8 bg-[#0C1821]/60 shadow-secondary-1 dark:bg-surface-dark">
             <div class="text-surface dark:text-white">
               <p class="mb-4 text-base mt-5 text-center mainheading text-xl">
                 Have any more questions or want to start collaborating?
@@ -43,10 +44,10 @@ const Doubts = () => {
         </div>
         <div className="right lg:w-[45%]">
           <div id="accordionExample">
-            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821] dark:border-neutral-600 dark:bg-body-dark">
+            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821]/60 dark:border-neutral-600 dark:bg-body-dark">
               <h2 class="mb-0" id="headingOne">
-                <button
-                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821] px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821] [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                <Link
+                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821]/60 px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821] [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
                   type="button"
                   data-twe-collapse-init
                   data-twe-target="#collapseOne"
@@ -69,7 +70,7 @@ const Doubts = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
               </h2>
               <div
                 id="collapseOne"
@@ -93,10 +94,10 @@ const Doubts = () => {
             </div>
           </div>
           <div id="accordionExample">
-            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821] dark:border-neutral-600 dark:bg-body-dark">
+            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821]/60 dark:border-neutral-600 dark:bg-body-dark">
               <h2 class="mb-0" id="headingTwo">
-                <button
-                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821] px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821] [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                <Link
+                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821]/60 px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821] [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
                   type="button"
                   data-twe-collapse-init
                   data-twe-target="#collapseTwo"
@@ -120,7 +121,7 @@ const Doubts = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
               </h2>
               <div
                 id="collapseTwo"
@@ -137,10 +138,10 @@ const Doubts = () => {
             </div>
           </div>
           <div id="accordionExample">
-            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821] dark:border-neutral-600 dark:bg-body-dark">
+            <div class="rounded-t-xl border-4 border-[#2d3b46] bg-[#0C1821]/60 dark:border-neutral-600 dark:bg-body-dark">
               <h2 class="mb-0" id="headingThree">
-                <button
-                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821] px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821] [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
+                <Link
+                  class="group relative flex w-full items-center rounded-t-lg border-0 bg-[#0C1821]/60 px-5 py-4 text-left text-base text-white transition [overflow-anchor:none] hover:z-[2] focus:z-[3] focus:outline-none dark:bg-body-dark dark:text-white [&:not([data-twe-collapse-collapsed])]:bg-[#0C1821]/60 [&:not([data-twe-collapse-collapsed])]:text-primary [&:not([data-twe-collapse-collapsed])]:shadow-border-b dark:[&:not([data-twe-collapse-collapsed])]:bg-surface-dark dark:[&:not([data-twe-collapse-collapsed])]:text-primary dark:[&:not([data-twe-collapse-collapsed])]:shadow-white/10 "
                   type="button"
                   data-twe-collapse-init
                   data-twe-target="#collapseThree"
@@ -163,7 +164,7 @@ const Doubts = () => {
                       />
                     </svg>
                   </span>
-                </button>
+                </Link>
               </h2>
               <div
                 id="collapseThree"

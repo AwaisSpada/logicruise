@@ -15,7 +15,7 @@ const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Works', href: '#works', current: false },
   { name: 'About', href: '/about', current: false },
-  { name: 'FAQ', href: '/faq', current: false },
+  { name: 'FAQs', href: '/faq', current: false },
 ]
 
 function classNames(...classes) {

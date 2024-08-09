@@ -45,7 +45,6 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  aria-current={item.current ? 'page' : undefined}
                   className={classNames(
                     item.current ? 'bg-[green] text-white' : 'text-gray-300 hover:bg-[green]/20 hover:text-white',
                     'rounded-md px-3 py-2 font-medium',
@@ -67,7 +66,6 @@ const Navbar = () => {
             key={item.name}
             as="a"
             href={item.href}
-            aria-current={item.current ? 'page' : undefined}
             className={classNames(
               item.current ? 'bg-gray-900 text-white' : 'text-gray-300 border px-20 rounded-xl text-center hover:bg-gray-700 hover:text-white',
               'block rounded-md px-3 py-2 text-base font-medium',

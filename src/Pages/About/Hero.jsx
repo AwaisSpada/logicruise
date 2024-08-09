@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link, Element } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <div className='hero bg-contain bg-center bg-no-repeat px-5'>
+    <Element name='about'>
+      <div className='hero bg-contain bg-center bg-no-repeat px-5'>
     <div className="logodiv text-center lg:mt-[150px] mt-10">
         <h4 className="text-[#ADDAB2] text-[12px]">T H O U G H T S &nbsp; A N D &nbsp; B L O G S</h4>
         <h1 className='heroheading text-4xl text-white mt-3'>Read My Narrative</h1>
@@ -19,6 +21,7 @@ const Hero = () => {
     </div>
   </div>
     </div>
+    </Element>
   )
 }
 

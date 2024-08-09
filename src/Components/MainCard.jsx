@@ -52,7 +52,7 @@ const MainCard = () => {
     }
   };
   return (
-    <div ref={ref} id="maincard" className="lg:flex md:flex md:w-[90%] lg:w-[75%] mx-auto relative bg-black rounded-[50px] mt-52 opacity-0">
+    <div ref={ref} id="maincard" className="lg:flex md:flex md:w-[90%] lg:w-[75%] p-1 mx-auto relative bg-black rounded-[50px] mt-52 opacity-0">
       <div className="left z-0 md:pl-10 md:pt-10 md:w-[100%] lg:pl-20 lg:pt-20 lg:w-[100%] text-white bg-black rounded-[50px]">
         <div className="lg:flex md:flex grid grid-rows-3 my-5 lg:my-0 grid-flow-col flex-col gap-2 text-sm lg:text-xl font-semibold lg:gap-[20px]">
           <a id="list1" className="cardButton rounded-full w-[100%] mx-auto" href="#component1" onClick={() => setSelectedComponent('Component1')}>Software Development</a>

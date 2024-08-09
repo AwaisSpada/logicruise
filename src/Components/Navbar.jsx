@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Link, Element } from 'react-scroll';
+import {Link as Linkk} from 'react-router-dom'
 
 // // Initialization for ES Users
 // import {
@@ -12,10 +13,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 
 const navigation = [
-  { name: 'Home', href: '/', current: false },
-  { name: 'Works', href: '#works', current: false },
-  { name: 'About', href: '/about', current: false },
-  { name: 'FAQs', href: '/faq', current: false },
+  { name: 'Home', href: '/', to: 'home', current: false,smooth: true, duration: 1500, link: Linkk },
+  { name: 'Works', href: 'works', current: false, smooth: true, duration: 1500, link: Link },
+  { name: 'About', href: 'about', current: false, link: Linkk },
+  { name: 'FAQs', href: 'faq', current: false, link: Linkk },
 ]
 
 function classNames(...classes) {
@@ -42,16 +43,18 @@ const Navbar = () => {
           <div className="hidden sm:ml-6 sm:block">
             <div className="flex space-x-4">
               {navigation.map((item) => (
-                <Link
+                <item.link
+                smooth={item.smooth}
+                duration={item.duration}
                   key={item.name}
                   to={item.href}
                   className={classNames(
                     item.current ? 'bg-[green] text-white' : 'text-gray-300 hover:bg-[green]/20 hover:text-white',
-                    'rounded-md px-3 py-2 font-medium',
+                    'rounded-md px-3 py-2 font-medium cursor-pointer',
                   )}
                 >
                   {item.name}
-                </Link>
+                </item.link>
               ))}
             </div>
           </div>

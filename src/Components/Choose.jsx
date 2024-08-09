@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom'
 import {gsap} from 'gsap'
 import {TweenMax, Power3, Power2, Power1, Power0} from 'gsap'
 import { useGSAP } from '@gsap/react';
 import { useInView } from "react-intersection-observer";
+import { Link, Element } from 'react-scroll';
 
 const Choose = () => {
     const [style, setStyle] = useState("bg-[green] p-10 rounded-tr-3xl rounded-b-3xl");
@@ -98,12 +98,12 @@ const Choose = () => {
           });
         }
   return (
-    <div id='choose' ref={ref} className='bg-[black]/30 mt-20 opacity-0 p-1'>
+    <div id='choose' ref={ref} className='bg-[black]/30 mt-20 opacity-0 p-5 pb-28'>
       <div className='lg:flex md:flex md:py-28 md:w-[100%] lg:py-36 lg:w-[80%] lg:gap-10 mx-auto text-white justify-center'>
         <div className="left md:mt-[-80px] lg:mt-[-100px]">
             <h1 id='choose1' className='text-5xl font-bold opacity-0'>Why should you choose Spadasoft?</h1>
             <h5 id='choose2' className='my-14 opacity-0'>Our innovative solutions using cutting-edge technology equip our clients to stay ahead of the curve in this ever-changing technological landscape. Whether you are a small-scale business or a large enterprise, the years of experience in the development industry have taught us to deliver the right solution tailored to everyone’s unique needs.</h5>
-            <button id='choose3' className='bg-black py-4 px-10 rounded-full opacity-0'>Contact Now</button>
+            <Link to='contact' smooth={true} duration={1500}><button id='choose3' className='bg-black py-4 px-10 rounded-full opacity-0'>Contact Now</button></Link>
         </div>
         <div id='choose4' className="right md:w-[100%] lg:w-[150%] opacity-0 mt-10 md:mt-[-90px] lg:mt-[-100px]">
             <div className='flex md:text-sm lg:text-xl justify-between'>

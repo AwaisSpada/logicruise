@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const AboutMe = () => {
   return (
-    <div className='mx-auto mt-40 lg:p-0 p-5 lg:flex justify-center gap-[120px] md:mx-10' id='about'>
+    <div className='mx-auto mt-40 lg:p-0 p-5 lg:flex justify-center gap-[120px] md:mx-10'>
       <div className="mb-20 lg:w-[35%]">
         <h4 className="text-[#ADDAB2] text-[12px]">
           A B O U T &nbsp; U S

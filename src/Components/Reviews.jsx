@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Element } from 'react-scroll';
 
 const Reviews = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -86,7 +86,7 @@ const Reviews = () => {
         <div className='py-5 mt-5 lg:mt-0 px-16 rounded-[40px] bg-[green] text-center'>
             <h2 className='text-4xl font-bold mb-2'>200+</h2>
             <h5>Satisfied Clients</h5>
-            <button className='my-5 py-4 px-14 bg-black rounded-full text-white'>Contact Now</button>
+            <Link to='contact' smooth={true} duration={1500}><button className='my-5 py-4 px-14 bg-black rounded-full text-white'>Contact Now</button></Link>
         </div>
       </div>
       <div>
@@ -107,13 +107,13 @@ const Reviews = () => {
     </div>
       <div className='flex gap-5 absolute md:bottom-5 md:left-[180px] lg:left-[150px] lg:top-[500px] md:top-[440px] top-[400px] left-[150px]'>
       <Link
-        className="transform -translate-y-1/2 text-[green] font-bold text-2xl py-2 px-4 rounded-full"
+        className="transform -translate-y-1/2 cursor-pointer text-[green] font-bold text-2xl py-2 px-4 rounded-full"
         onClick={handlePrev}
       >
         ❮
       </Link>
       <Link
-        className="transform -translate-y-1/2 text-[green] font-bold text-2xl py-2 px-4 rounded-full"
+        className="transform -translate-y-1/2 cursor-pointer text-[green] font-bold text-2xl py-2 px-4 rounded-full"
         onClick={handleNext}
       >
         ❯

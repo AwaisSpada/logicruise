@@ -7,6 +7,7 @@ import {gsap} from 'gsap'
 import {TweenMax, Power3} from 'gsap'
 import { useGSAP } from '@gsap/react';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link, Element } from 'react-scroll';
 
 const logos = ['https://framerusercontent.com/images/El644u0YyJGjpMkzrL7UWypGnY.png?scale-down-to=512']; 
 const words = ['ACCESSIBILITY', 'USERFRIENDLY']
@@ -75,13 +76,14 @@ const Main = () => {
   
 
   return (
-    <div className='bg-[black]/30' id='works'>
+    <Element name='work'>
+      <div className='bg-[black]/30' id='works'>
       <div ref={ref} id='heading' className={`text-center  transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
         <h4 className="text-[#ADDAB2] text-[12px]">C U R A T E D &nbsp; W O R K</h4>
         <h1 className='heroheading text-4xl text-white mt-3'>Featured Case Studies</h1>
         <h5 className='text-white text-[17px]'>Compilation of case studies that evoke my sense of pride</h5>
       </div>
-      <div className="cards mt-20 relative">
+      <div className="cards p-2 mt-20 relative">
       <div id='headingcard' className={`card1 opacity-0 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] sticky top-[10px] lg:w-[70%] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-2`}>
       <div className='cardd1 lg:w-[45%] md:w-[80%] w-[100%] lg:ml-0 ml-[-60px] lg:mt-0 md:mt-0 mt-[-30px]'>
         <h6 className='text-[#ADDAB2]'>AIRBNB . 2023</h6>
@@ -144,6 +146,7 @@ const Main = () => {
       </Slider>
     </div>
     </div>
+    </Element>
   )
 }
 

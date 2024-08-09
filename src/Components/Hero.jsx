@@ -9,6 +9,7 @@ import Logo1 from '../assets/electron.svg'
 import {gsap} from 'gsap'
 import {TweenMax, Power3, Power4} from 'gsap'
 import { useGSAP } from '@gsap/react';
+import { Link, Element } from 'react-scroll';
 
 const logos = ['https://cdna.iconscout.com/img/duolingo.389f11b.svg', 'https://cdna.iconscout.com/img/uber.314ad21.svg', 'https://cdna.iconscout.com/img/microsoft.c051f44.svg', 'https://cdna.iconscout.com/img/airbnb.69a8173.svg', 'https://cdna.iconscout.com/img/google.c0129cb.svg', 'https://cdna.iconscout.com/img/amazon.90c4794.svg', 'https://cdna.iconscout.com/img/disney.042cf1c.svg', 'https://cdna.iconscout.com/img/instacart.d64c895.svg']; 
 
@@ -93,7 +94,8 @@ const Hero = () => {
   
 
   return (
-    <div className='hero bg-[black]/30 w-[100%] mx-auto relative mt-[-270px]'>
+    <Element name='home'>
+      <div className='hero bg-[black]/30 w-[100%] mx-auto relative mt-[-270px]'>
       <div className='flex justify-center'>
         {/* <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
       <img className='headlogo w-14 ml-[90px] rotate-1' src="https://framerusercontent.com/images/K87K8oWoMPCJBJmyQKbXXvzbxdA.png" alt="" />
@@ -132,6 +134,7 @@ const Hero = () => {
       </Slider>
     </div>
     </div>
+    </Element>
   )
 }
 

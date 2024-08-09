@@ -62,9 +62,7 @@ const Navbar = () => {
     <DisclosurePanel className="sm:hidden flex justify-center">
       <div className="space-y-1 px-2 pb-3 pt-2">
         {navigation.map((item) => (
-          <DisclosureButton
-            key={item.name}
-            as="Link"
+          <Link
             to={item.href}
             className={classNames(
               item.current ? 'bg-gray-900 text-white' : 'text-gray-300 border px-20 rounded-xl text-center hover:bg-gray-700 hover:text-white',
@@ -72,7 +70,7 @@ const Navbar = () => {
             )}
           >
             {item.name}
-          </DisclosureButton>
+          </Link>
         ))}
       </div>
     </DisclosurePanel>

@@ -31,20 +31,18 @@ const Footer = () => {
       </div>
     </div>
     </div>
-    <div className='flex lg:justify-center justify-between lg:text-right text-center lg:text-normal text-sm lg:gap-[250px] lg:my-5 my-10'>
+    <div className='grid lg:grid-cols-3 grid-cols-3 text-sm lg:text-normal lg:my-0 my-10 gap-4 lg:w-[84%] lg:ml-auto'>
         <a href="/">Custom Software Development</a>
         <a href="/">Web Development</a>
         <a href="/">Mobile App Development</a>
-    </div>
-    <div className='flex lg:justify-center justify-between lg:text-normal text-sm lg:gap-[340px] mb-10'>
         <a href="/">UI/UX Design</a>
         <a href="/">SAAS Development</a>
-        <a href="/">IT Outsourcing</a>
+        <a className='lg:text-right lg:w-[40%]' href="/">IT Outsourcing</a>
     </div>
     </div>
-      <hr className='my-4 border-black border w-[70%] mx-auto' />
-      <div className='lg:flex justify-around mt-5 w-[90%] mx-auto'>
-        <div className='flex gap-4'>
+      <hr className='my-4 border-black border lg:w-[70%] mx-auto' />
+      <div className='lg:flex justify-around mt-5 lg:w-[90%] mx-auto'>
+        <div className='flex gap-4 justify-between my-5 lg:my-0'>
             <p>Created by</p>
             <a href="/">@sunalsood</a>
             <a href="/">@shashpicious_</a>

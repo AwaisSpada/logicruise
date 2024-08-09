@@ -16,23 +16,34 @@ import AboutServices from './Pages/About/Services'
 import Team from './Pages/About/Team'
 import Customers from './Pages/About/Customers'
 import Contact from './Components/Contact'
+import MainCard from './Components/MainCard'
+import Choose from './Components/Choose'
+import Approach from './Components/Approach'
+import Reviews from './Components/Reviews'
+
+
 
 function App() {
+  AOS.init();
   return (
     <>
      <div>
-     <Navbar/>
      
+     <Navbar/>
      <Routes>
       <Route path='/' element={
         <>
       <Hero/>
+      <MainCard/>
+      <Choose/>
+      <Approach/>
      <Main/>
      <Blogs/>
-     <Services/>
+     {/* <Services/> */}
      <Testimonials/>
+     <Reviews/>
      <AboutMe/>
-     <Doubts/>
+     {/* <Doubts/> */}
         </>
       }/>
       <Route path='/about' element={<>
@@ -41,8 +52,8 @@ function App() {
         <Values/>
         <AboutServices/>
         <Team/>
-        <Customers/>
-      </>} />
+        <Reviews/>
+        </>} />
      </Routes>
      <Contact/>
      <Footer/>

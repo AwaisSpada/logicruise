@@ -1,4 +1,47 @@
 import React from 'react'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
+
+const logos = ['https://spadasoft.com/wp-content/uploads/2023/10/Ads.svg', 'https://spadasoft.com/wp-content/uploads/2023/10/iecl.svg', 'https://spadasoft.com/wp-content/uploads/2023/05/gewch.svg', 'https://spadasoft.com/wp-content/uploads/2023/05/make-the-dot-1.svg', 'https://spadasoft.com/wp-content/uploads/2023/10/Solaire.svg']; 
+
+
+
+const SlideItem = ({ index }) => (
+  <div className="flex items-center justify-center h-20 bg-[#A1DEB0]  mx-auto">
+    <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-full" />
+  </div>
+);
+
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 2000, // Transition speed in milliseconds
+  autoplay: true, // Auto play slides
+  autoplaySpeed: -1000, // Time between slides in milliseconds
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  draggable: true,
+  arrows: false,
+  cssEase: 'linear',
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      }
+    }
+  ]
+};
 
 const Services = () => {
   return (
@@ -23,15 +66,15 @@ const Services = () => {
         </h5>
       </div>
     </div>
-    <div className='mx-auto lg:w-[75%] mt-40 text-white'>
-      <h5 className='font-semibold mb-10'>OUR CLIENTS</h5>
-      <div className='flex justify-between lg:gap-[120px] bg-[green] py-5 relative'>
-        <img className='shadowpic w-[70px]' src="https://spadasoft.com/wp-content/uploads/2023/10/Ads.svg" alt="" />
-        <img className='shadowpic w-[70px]' src="https://spadasoft.com/wp-content/uploads/2023/10/iecl.svg" alt="" />
-        <img className='shadowpic w-[70px]' src="https://spadasoft.com/wp-content/uploads/2023/05/gewch.svg" alt="" />
-        <img className='shadowpic w-[70px]' src="https://spadasoft.com/wp-content/uploads/2023/05/make-the-dot-1.svg" alt="" />
-        <img className='shadowpic w-[70px]' src="https://spadasoft.com/wp-content/uploads/2023/10/Solaire.svg" alt="" />
-      </div>
+    <div className='mx-auto mt-40 text-white'>
+      <h5 className='font-semibold mb-10 text-center'>OUR CLIENTS</h5>
+        <div id='slider' className="mx-auto w-[100%] bg-transparent rotate-[-1deg]">
+      <Slider {...settings}>
+        {[...Array(8).keys()].map((_, index) => (
+          <SlideItem key={index} index={index} />
+        ))}
+      </Slider>
+    </div>
     </div>
     </div>
   )

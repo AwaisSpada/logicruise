@@ -21,8 +21,6 @@ import Choose from './Components/Choose'
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
 import Animation from "./BgAnimation/Animation";
-import Stars from './BgAnimation/Stars'
-
 
 
 function App() {
@@ -30,7 +28,6 @@ function App() {
   return (
     <>
      <div>
-     <Stars/>
      <Animation/>
      <Navbar/>
      <Routes>

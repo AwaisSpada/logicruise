@@ -20,6 +20,8 @@ import MainCard from './Components/MainCard'
 import Choose from './Components/Choose'
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
+import Animation from "./BgAnimation/Animation";
+import Stars from './BgAnimation/Stars'
 
 
 
@@ -28,7 +30,8 @@ function App() {
   return (
     <>
      <div>
-     
+     <Stars/>
+     <Animation/>
      <Navbar/>
      <Routes>
       <Route path='/' element={

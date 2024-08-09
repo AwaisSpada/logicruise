@@ -107,7 +107,7 @@ const Hero = () => {
       <h5 id='text' className=' text-center text-white lg:text-6xl text-3xl opacity-0 mt-[400px]'>
       One Stop Shop for All Your 
         </h5>
-        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[green]'>Digital Needs !</h1>
+        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[white]'>Digital Needs !</h1>
         <h6 id='smtext' className='text-center text-[#a0a0a0] opacity-0 text-4xl'>
         Hire Now! An Individual or a team from our talent pool for your
         </h6>

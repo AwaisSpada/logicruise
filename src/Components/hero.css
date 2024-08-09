@@ -237,3 +237,7 @@ nav{
     background: linear-gradient(to right,  #122d07, #487410 );
     box-shadow: 0px 0px 20px black;
 }
+
+.linkShadow{
+  filter: drop-shadow(1px 1px 0px black);
+}

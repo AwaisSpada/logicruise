@@ -49,8 +49,8 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   className={classNames(
-                    item.current ? 'bg-[green] text-white' : 'text-gray-300 hover:bg-[green]/20 hover:text-white',
-                    'rounded-md px-3 py-2 font-medium cursor-pointer',
+                    item.current ? 'linkShadow bg-[green] text-white' : 'linkShadow text-gray-300 hover:bg-[green]/20 hover:text-white',
+                    'linkShadow rounded-md px-3 py-2 font-medium cursor-pointer',
                   )}
                 >
                   {item.name}

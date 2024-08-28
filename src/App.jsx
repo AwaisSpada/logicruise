@@ -20,15 +20,13 @@ import MainCard from './Components/MainCard'
 import Choose from './Components/Choose'
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
-import Animation from "./BgAnimation/Animation";
 
 
 function App() {
   AOS.init();
   return (
     <>
-     <div>
-     <Animation/>
+     <div className=''>
      <Navbar/>
      <Routes>
       <Route path='/' element={

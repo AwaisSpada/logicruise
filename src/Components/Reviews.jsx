@@ -51,46 +51,46 @@ const Reviews = () => {
   return (
     <div>
     <div className="text-center mb-20 mt-20">
-        <h4 className="text-[#ADDAB2] text-[12px]">
+        <h4 className="text-[#36668b] text-[15px] font-bold">
           S O M E &nbsp; D O U B T S
         </h4>
-        <h1 className="heroheading text-4xl text-white mt-3">
+        <h1 className="heroheading text-4xl text-black mt-3">
           Frequently Asked Questions
         </h1>
-        <h5 className="text-white text-[17px]">
+        <h5 className="text-black text-[17px]">
           Your answers await right here
         </h5>
       </div>
       <div className='lg:flex justify-center lg:gap-20 p-5'>
         <div className='lg:block flex justify-center'>
-        <div className='border border-[yellow]/30 p-5 w-[160px] rounded-full'>
-            <h2 className='border border-[green] border-2 p-14 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-5 top-5 text-white/60'>300+</h2><i class="fa fa-arrow-up text-[green] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
+        <div className='border border-[black] p-5 w-[160px] rounded-full'>
+            <h2 className='border border-[#36668b] border-3 p-14 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-5 top-5 text-[black]'>300+</h2><i class="fa fa-arrow-up text-[#36668b] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
         </div>
-        <h2 className='mt-5 text-center lg:flex hidden justify-center text-white/80'>Completed Projects</h2>
+        <h2 className='mt-5 text-center lg:flex hidden justify-center text-black'>Completed Projects</h2>
         </div>
-        <h2 className='mt-5 text-center lg:hidden text-white/80'>Completed Projects</h2>
+        <h2 className='mt-5 text-center lg:hidden text-black'>Completed Projects</h2>
         <div className='lg:block flex justify-center'>
-        <div className='border border-[yellow]/30 p-5 my-5 lg:my-0 w-[160px] rounded-full'>
-            <h2 className='border border-[green] border-2 p-14 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-9 top-5 text-white/60'>50</h2><i class="fa fa-arrow-up text-[green] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
+        <div className='border border-[black] p-5 my-5 lg:my-0 w-[160px] rounded-full'>
+            <h2 className='border border-[#36668b] border p-14 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-9 top-5 text-black'>50</h2><i class="fa fa-arrow-up text-[green] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
         </div>
-        <h2 className='mt-5 text-center lg:flex hidden justify-center text-white/80'>Awards Won</h2>
+        <h2 className='mt-5 text-center lg:flex hidden justify-center text-black'>Awards Won</h2>
         </div>
         <h2 className='mt-5 text-center lg:hidden text-white/80'>Awards Won</h2>
         <div className='lg:block flex justify-center'>
-        <div className='border border-[yellow]/30 p-5 w-[160px] my-5 lg:my-0 rounded-full'>
-            <h2 className='border border-[green] border-2 p-14 lg:my-0 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-8 top-5 text-white/60'>81+</h2><i class="fa fa-arrow-up text-[green] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
+        <div className='border border-[black] p-5 w-[160px] my-5 lg:my-0 rounded-full'>
+            <h2 className='border border-[#36668b] border p-14 lg:my-0 rounded-[60%] text-4xl text-center font-bold relative'><h2 className='absolute left-8 top-5 text-black'>81+</h2><i class="fa fa-arrow-up text-[#36668b] text-[20px] bottom-5 left-[50px] absolute"></i></h2>
         </div>
-        <h2 className='mt-5 text-center lg:flex hidden justify-center text-white/80'>Skilled Professionals</h2>
+        <h2 className='mt-5 text-center lg:flex hidden justify-center text-black'>Skilled Professionals</h2>
         </div>
-        <h2 className='mt-5 text-center lg:hidden text-white/80'>Skilled Professionals</h2>
-        <div className='py-5 mt-5 lg:mt-0 px-16 rounded-[40px] bg-[green] text-center'>
+        <h2 className='mt-5 text-center lg:hidden text-black'>Skilled Professionals</h2>
+        <div className='py-5 mt-5 lg:mt-0 px-16 rounded-[40px] bg-[#36668b] text-center'>
             <h2 className='text-4xl font-bold mb-2'>200+</h2>
             <h5>Satisfied Clients</h5>
             <Link to='contact' smooth={true} duration={1500}><button className='my-5 py-4 px-14 bg-black rounded-full text-white'>Contact Now</button></Link>
         </div>
       </div>
       <div>
-      <div className='lg:flex md:flex relative justify-evenly mt-20 bg-[black]/30 lg:w-[80%] w-[95%] mx-auto lg:py-20 py-10 px-5 rounded-[40px] text-white'>
+      <div className='lg:flex md:flex relative justify-evenly mt-20 bg-[#36668b] lg:w-[80%] w-[95%] mx-auto lg:py-20 py-10 px-5 rounded-[40px] text-white'>
       <div className="lg:w-[35%] md:w-[50%] overflow-hidden">
       <div
         className="flex transition-transform duration-500 ease-in-out"
@@ -100,20 +100,20 @@ const Reviews = () => {
           <div key={index} className="min-w-full p-4">
             <p className='text-2xl'>{text.one.slice(0, 290)}</p>
             <p className='text-normal mt-5'>{text.tow}</p>
-            <p className='text-sm text-white/80'>{text.three}</p>
+            <p className='text-sm text-black font-bold'>{text.three}</p>
           </div>
         ))}
       </div>
     </div>
       <div className='flex gap-5 absolute md:bottom-5 md:left-[180px] lg:left-[150px] lg:top-[500px] md:top-[440px] top-[400px] left-[150px]'>
       <Link
-        className="transform -translate-y-1/2 cursor-pointer text-[green] font-bold text-2xl py-2 px-4 rounded-full"
+        className="transform -translate-y-1/2 cursor-pointer text-[black] font-bold text-2xl py-2 px-4 rounded-full"
         onClick={handlePrev}
       >
         ❮
       </Link>
       <Link
-        className="transform -translate-y-1/2 cursor-pointer text-[green] font-bold text-2xl py-2 px-4 rounded-full"
+        className="transform -translate-y-1/2 cursor-pointer text-[black] font-bold text-2xl py-2 px-4 rounded-full"
         onClick={handleNext}
       >
         ❯

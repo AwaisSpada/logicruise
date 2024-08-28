@@ -16,7 +16,7 @@ const logos = ['https://cdna.iconscout.com/img/duolingo.389f11b.svg', 'https://c
 
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center h-64 bg-transparent w-[100px] mx-auto">
+  <div className="sliderlogo flex items-center justify-center mt-20 w-[100px] mx-auto">
     <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-full" />
   </div>
 );
@@ -95,7 +95,7 @@ const Hero = () => {
 
   return (
     <Element name='home'>
-      <div className='hero bg-[black]/30 w-[100%] mx-auto relative mt-[-270px]'>
+      <div className='hero w-[100%] mx-auto relative mt-[-270px]'>
       <div className='flex justify-center'>
         {/* <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
       <img className='headlogo w-14 ml-[90px] rotate-1' src="https://framerusercontent.com/images/K87K8oWoMPCJBJmyQKbXXvzbxdA.png" alt="" />
@@ -104,14 +104,14 @@ const Hero = () => {
       </h5>
         </div> */}
       </div>
-      <h5 id='text' className=' text-center text-white lg:text-6xl text-3xl opacity-0 mt-[400px]'>
+      <h5 id='text' className=' text-center text-[black] font-bold  lg:text-6xl text-3xl opacity-0 mt-[400px]'>
       One Stop Shop for All Your 
         </h5>
-        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[white]'>Digital Needs !</h1>
-        <h6 id='smtext' className='text-center text-[#a0a0a0] opacity-0 text-4xl'>
+        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[black]'>Digital Needs !</h1>
+        <h6 id='smtext' className='text-center text-[black] opacity-0 text-4xl'>
         Hire Now! An Individual or a team from our talent pool for your
         </h6>
-        <h1 className="text-center text-3xl text-[green] font-semibold">
+        <h1 className="text-center text-3xl text-[#36668b] font-semibold ">
                   <Typewriter
                     options={{
                       strings: [
@@ -125,8 +125,8 @@ const Hero = () => {
                     }}
                   />
                 </h1>
-                <h2 className='text-center my-5 text-white text-xl'>The best brands choose Spadasoft</h2>
-        <div id='slider' className="mx-auto lg:w-[70%] bg-transparent opacity-0">
+                <h2 className='text-center my-5 text-black text-xl'>The best brands choose Spadasoft</h2>
+        <div id='slider' className="mx-auto lg:w-[70%] opacity-0">
       <Slider {...settings}>
         {[...Array(8).keys()].map((_, index) => (
           <SlideItem key={index} index={index} />

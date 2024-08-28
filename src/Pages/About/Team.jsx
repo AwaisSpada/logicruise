@@ -25,18 +25,18 @@ const Team = () => {
   };
 
   return (
-    <div>
+    <div className='bg-[black]/30 pb-5 pt-1 mt-20'>
     <div className="text-center mt-20">
-        <h4 className="text-[#ADDAB2] text-[12px]">T H O U G H T S &nbsp; A N D &nbsp; B L O G S</h4>
-        <h1 className='heroheading text-4xl text-white mt-3'>Read My Narrative</h1>
-        <h5 className='text-white text-[17px]'>Pages filled with design wisdom, imagination and much more</h5>
+        <h4 className="text-[#36668b] font-bold text-[15px]">T H O U G H T S &nbsp; A N D &nbsp; B L O G S</h4>
+        <h1 className='heroheading text-4xl text-black mt-3'>Read My Narrative</h1>
+        <h5 className='text-black text-[17px]'>Pages filled with design wisdom, imagination and much more</h5>
       </div>
         <div className='lg:flex relative justify-center lg:w-[85%] text-white mx-auto mt-40 p-5'>
       <div className='lg:w-[50%] mx-auto'>
-        <h5 className='text-xl font-semibold mb-20'>
+        <h5 className='text-xl text-[#36668b] font-bold mb-20'>
             TEAM
         </h5>
-        <h1 className='heroheading text-6xl lg:w-[80%]'>
+        <h1 className='heroheading text-black text-6xl lg:w-[80%]'>
         Meet the Spadasoft revenue revolutionaries
         </h1>
       </div>
@@ -51,15 +51,15 @@ const Team = () => {
             <div>
               <img className='slideimg w-[300px] ml-[-10px] bg-[#0d2205] pt-2 px-2 rounded-[15%]' src={pic} alt="" />
               <div className='my-5'>
-              <h5 className='font-semibold text-xl'>NAME HERE</h5>
-              <h6 className='text-sm mt-2 text-white/80'>ROLE HERE</h6>
+              <h5 className='font-semibold text-[black] text-xl'>NAME HERE</h5>
+              <h6 className='text-sm mt-2 text-[#36668b]'>ROLE HERE</h6>
               </div>
             </div>
             <div>
             <img className='slideimg w-[310px] ml-[-10px] bg-[#0d2205] pt-2 px-2 rounded-[15%]' src={pic1} alt="" />
             <div className='my-5'>
-              <h5 className='font-semibold text-xl'>NAME HERE</h5>
-              <h6 className='text-sm mt-2 text-white/80'>ROLE HERE</h6>
+              <h5 className='font-semibold text-black text-xl'>NAME HERE</h5>
+              <h6 className='text-sm mt-2 text-[#36668b]'>ROLE HERE</h6>
               </div>
             </div>
             </div>

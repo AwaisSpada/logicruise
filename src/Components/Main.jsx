@@ -15,7 +15,7 @@ const words = ['ACCESSIBILITY', 'USERFRIENDLY']
 
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center bg-transparent w-[100px] mx-auto">
+  <div className="flex items-center justify-center text-white bg-transparent w-[100px] mx-auto">
     <img  src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-10 ml-8" />
     <h1 className='ml-10'>{words[index % words.length]}</h1>
   </div>
@@ -79,14 +79,14 @@ const Main = () => {
     <Element name='work'>
       <div className='bg-[black]/30' id='works'>
       <div ref={ref} id='heading' className={`text-center  transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
-        <h4 className="text-[#ADDAB2] text-[12px]">C U R A T E D &nbsp; W O R K</h4>
+        <h4 className="text-[#36668b] font-bold text-[12px]">C U R A T E D &nbsp; W O R K</h4>
         <h1 className='heroheading text-4xl text-white mt-3'>Featured Case Studies</h1>
         <h5 className='text-white text-[17px]'>Compilation of case studies that evoke my sense of pride</h5>
       </div>
       <div className="cards p-2 mt-20 relative">
       <div id='headingcard' className={`card1 opacity-0 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] sticky top-[10px] lg:w-[70%] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-2`}>
       <div className='cardd1 lg:w-[45%] md:w-[80%] w-[100%] lg:ml-0 ml-[-60px] lg:mt-0 md:mt-0 mt-[-30px]'>
-        <h6 className='text-[#ADDAB2]'>AIRBNB . 2023</h6>
+        <h6 className='text-[#36668b] font-bold'>AIRBNB . 2023</h6>
         <h2 className='mainheading text-xl lg:text-3xl text-white mt-5'>Curating AR experiences while travelling</h2>
         <hr className='lg:my-10 my-5' />
         <li className='text-white text-sm'>Onboarding increased to 12%.</li>
@@ -100,7 +100,7 @@ const Main = () => {
       </div>
       <div id='headingcard' className={`card2 opacity-0 lg:h-[40vh] xl:h-[60vh] sticky top-[110px] md:h-[35vh] h-[60vh]  lg:w-[70%] md:w-[80%] md:flex mx-auto lg:flex justify-between`}>
       <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#ADDAB2]'>SHOPIFY . 2023</h6>
+        <h6 className='text-[#36668b] font-bold'>SHOPIFY . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Building profitable dropshipping dashboard</h2>
         <h4 className='text-white lg:my-5 my-2'>
         Aims to show you how you can start your own profitable business in just a few weeks, how company increased their MRR by 25%.
@@ -113,7 +113,7 @@ const Main = () => {
       </div>
       <div id='headingcard' className="card3 opacity-0 lg:w-[70%] md:w-[80%] sticky top-[210px] md:h-[35vh] lg:h-[40vh] xl:h-[60vh] h-[60vh] mx-auto lg:flex md:flex justify-between">
       <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#ADDAB2]'>DELLOITE . 2023</h6>
+        <h6 className='text-[#36668b] font-bold'>DELLOITE . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Terrific: An app that helps you find a home tutor</h2>
         <h4 className='text-white my-5'>
         Terrific Tutors is a mobile app which will help people (students/parents) to find a home tutor.        </h4>
@@ -125,7 +125,7 @@ const Main = () => {
       </div>
       <div id='headingcard' className="card4 opacity-0 lg:w-[70%] md:h-[35vh] sticky top-[100px] lg:h-[40vh] xl:h-[60vh] h-[60vh] md:w-[80%] mx-auto lg:flex md:flex justify-between">
       <div className='cardd1 lg:ml-0 ml-[-60px] lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#ADDAB2]'>HEADOUT . 2023</h6>
+        <h6 className='text-[#36668b] font-bold'>HEADOUT . 2023</h6>
         <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Enhancing the payment flow of Headout</h2>
         <hr className='my-10' />
         <li className='text-white text-sm'>Onboarding drop-offs decreased to 12%.</li>
@@ -138,7 +138,7 @@ const Main = () => {
       </div>
       </div>
       </div>
-      <div className="rotate-[-1deg] py-2 my-20 bg-[#A1DEB0]">
+      <div className="rotate-[-1deg] py-2 my-20 bg-[#36668b]">
       <Slider {...settings}>
         {[...Array(8).keys()].map((_, index) => (
           <SlideItem key={index} index={index} />

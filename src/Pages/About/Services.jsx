@@ -10,7 +10,7 @@ const logos = ['https://spadasoft.com/wp-content/uploads/2023/10/Ads.svg', 'http
 
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center h-20 bg-[#A1DEB0]  mx-auto">
+  <div className="flex items-center justify-center h-20 bg-[#36668b]  mx-auto">
     <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-full" />
   </div>
 );
@@ -47,16 +47,16 @@ const Services = () => {
   return (
     <div className=''>
     <div className="text-center mt-20">
-        <h4 className="text-[#ADDAB2] text-[12px]">T H O U G H T S &nbsp; A N D &nbsp; B L O G S</h4>
-        <h1 className='heroheading text-4xl text-white mt-3'>Read My Narrative</h1>
-        <h5 className='text-white text-[17px]'>Pages filled with design wisdom, imagination and much more</h5>
+        <h4 className="text-[#36668b] font-bold text-[15px]">T H O U G H T S &nbsp; A N D &nbsp; B L O G S</h4>
+        <h1 className='heroheading text-4xl text-black mt-3'>Read My Narrative</h1>
+        <h5 className='text-black text-[17px]'>Pages filled with design wisdom, imagination and much more</h5>
       </div>
-      <div className='lg:flex justify-evenly text-white lg:mt-40 mt-20 p-5'>
+      <div className='lg:flex justify-evenly text-black lg:mt-40 mt-20 p-5'>
       <div>
         <h5 className='text-normal'>
         MARKETING SOLUTIONS PROVIDER
         </h5>
-        <h2 className='lg:text-5xl text-4xl heroheading mt-5'>
+        <h2 className='lg:text-5xl text-[#36668b] text-4xl heroheading mt-5'>
         We’re a leader in digital <br /> marketing solutions
         </h2>
       </div>
@@ -66,7 +66,7 @@ const Services = () => {
         </h5>
       </div>
     </div>
-    <div className='mx-auto mt-40 text-white'>
+    <div className='mx-auto mt-40 text-[#36668b] font-bold'>
       <h5 className='font-semibold mb-10 text-center'>OUR CLIENTS</h5>
         <div id='slider' className="mx-auto w-[100%] bg-transparent rotate-[-1deg]">
       <Slider {...settings}>

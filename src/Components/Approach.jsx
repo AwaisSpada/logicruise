@@ -34,10 +34,10 @@ const Approach = () => {
         });
       }
   return (
-    <div ref={ref} id='approach' className='lg:flex md:flex justify-between lg:pb-10 lg:pt-20 text-white/90 opacity-0 lg:mt-0 mt-[100px] p-5'>
+    <div ref={ref} id='approach' className='lg:flex md:flex justify-between lg:pb-10 lg:pt-20 text-[#36668b] opacity-0 lg:mt-0 mt-[100px] p-5'>
       <div id='approach1' className='lg:w-[35%] lg:ml-[200px]'> 
         <h2 className='font-semibold'>OUR APPROACH</h2>
-        <h1 className='g:text-4xl text-3xl font-bold'>We equip you with the right tools to help you excel in this ever-changing digital landscape.</h1>
+        <h1 className='g:text-4xl text-4xl font-[800]'>We equip you with the right tools to help you excel in this ever-changing digital landscape.</h1>
       </div>
       <div id='approach2' className='lg:w-[35%] lg:ml-0 sm:ml-0 md:ml-5 mt-5 lg:mr-[200px]'>
         <h2>

@@ -1,16 +1,6 @@
 
-
-
-
-
-
-
-
-
-
-
 .cardButton:focus{
-  background-color: green;
+  background-color: #85a3ba;
   border-radius: 40px;
 }
 .cardButton{
@@ -23,13 +13,13 @@
 .circle-text{
   animation-name: circletext;
   animation-duration: 5s;
-  transition: all ease-in-out 2s;
+  transition: all ease-in-out 1.5s;
   animation-timing-function: inherit;
   animation-iteration-count: infinite;
   padding: 30px;
   width: 30%;
   margin-right: auto;
-  color: white;
+  color: rgb(0, 0, 0);
   margin-left: auto;
   border: 10px solid white;
     border-radius: 50%;
@@ -44,26 +34,19 @@
 }
 @keyframes circletext {
   0% {
-    border: 10px solid green;
+    border: 10px solid transparent;
       }
   50% {
-    border: 10px solid rgb(56, 101, 56);
+    border: 10px solid rgb(90, 128, 166);
   }
   75% {
-    border: 10px solid green;
+    border: 10px solid #36668b;
     }
   100% {
-    border: 10px solid rgb(56, 101, 56);
+    border: 10px solid transparent;
     }
 }
-.arrowimg{
-  filter: drop-shadow(0px 0px 0.5px white);
-}
 
-
-.slideimg{
-  filter: drop-shadow(0px 0px 0.5px white);
-}
 
 .testimonial:hover{
   scale: 1;
@@ -126,38 +109,6 @@ button:hover{
     margin-top: 100px;
   }
 }
-
-.before::before{
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    top: 18.5px;
-    left: 18px;
-    opacity: 0.7;
-    position: absolute;
-    background-color: greenyellow;
-    animation-name: beforee;
-    animation-duration: 0.5;
-    animation-iteration-count: infinite;
-    -webkit-animation: 3s blink ease infinite;
-  -moz-animation: 3s blink ease infinite;
-  -ms-animation: 3s blink ease infinite;
-  -o-animation: 3s blink ease infinite;
-  animation: 2.5s blink ease infinite;
-}
-
-@-webkit-keyframes blink {
-  from, to {
-    opacity: 0.05;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.before{
-    position: relative;
-}
 .heroheading{
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -180,17 +131,18 @@ button:hover{
 }
 nav{
   --border-bottom-width: 0.5px;
-  --border-color: rgba(83, 80, 80, 1);
+  --border-color: rgb(52, 48, 48);
   --border-left-width: 0.5px;
   --border-right-width: 0.5px;
   --border-style: solid;
   --border-top-width: 0.5px;
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.09);
+  background-color: rgba(99, 94, 94, 0.084);
   border-radius: 100px;
-  box-shadow: rgba(0, 0, 0, 0.986) -1px 2px 12px 0px;
+  box-shadow: blue;
   transform: none;
   transform-origin: 50% 50% 0px;
+  border: 1px solid rgb(30, 17, 115);
   opacity: 1;
   z-index: 2;
 }
@@ -202,7 +154,7 @@ nav{
   border-radius: 30px;
   padding: 50px 20px 20px 100px;
   background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
-  background: linear-gradient(to right, #495f5d , #313e32);
+  background: linear-gradient(to right, #37525f , #7c8a8e);
 }
 .card2{
   background-size: 128px;
@@ -212,7 +164,7 @@ nav{
   border-radius: 30px;
   padding: 50px 20px 20px 100px;
   background-image: url('https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024');
-  background: linear-gradient(to right, #2f4e4b , #0a0c0a);
+  background: linear-gradient(to right, #2f5b57 , #14385d);
 }
 .card3{
   background-size: 128px;
@@ -222,7 +174,7 @@ nav{
   border-radius: 30px;
   padding: 50px 20px 20px 100px;
   background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
-  background: linear-gradient(to right, #123734 , #313e32);
+  background: linear-gradient(to right, #688582 , #043b5e);
 }
 .card4{
   background-size: 128px;
@@ -232,13 +184,54 @@ nav{
   border-radius: 30px;
   padding: 50px 0px 20px 100px;
   background-image: url('https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png');
-  background: linear-gradient(to right , #375d3a, #293837);
+  background: linear-gradient(to right , #142a34, #6f9c99);
 }
-.footer{
+/* .footer{
     background: linear-gradient(to right,  #122d07, #487410 );
     box-shadow: 0px 0px 20px black;
+} */
+
+.footer{
+  background: linear-gradient(to right,  #36668b, #03283f );
+  box-shadow: 0px 0px 20px black;
 }
 
 .linkShadow{
-  filter: drop-shadow(1px 1px 0px black);
+  filter: drop-shadow(0px 0px 5px white);
+  color: black;
+}
+
+.hero {
+  position: relative; /* Ensure the overlay will be positioned correctly */
+  overflow: hidden; /* Prevent overflow if needed */
+  background-image: url('../assets/getty_603992138_315591.jpg');
+  background-size: cover; /* Cover the entire element */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  /* Optional: set a minimum height or other styles for the .hero element */
+}
+
+/* Overlay with color and opacity */
+.hero::before {
+  content: ""; /* Required to generate the pseudo-element */
+  position: absolute; /* Position it over the background image */
+  top: 0; /* Cover the whole hero element */
+  left: 0; /* Cover the whole hero element */
+  width: 100%; /* Cover the whole hero element */
+  height: 100%; /* Cover the whole hero element */
+  background: rgba(200, 199, 199, 0.919); /* Black color with 50% opacity */
+  /* Adjust opacity by changing the alpha value (0.5 in this example) */
+  z-index: 1; /* Ensure it sits above the background image */
+}
+
+/* Ensure the content inside the .hero is above the overlay */
+.hero > * {
+  position: relative; /* Adjust as needed to keep content on top */
+  z-index: 2; /* Place content above the overlay */
+}
+
+
+
+.sliderlogo{
+  filter: drop-shadow(0px 0px 5px white);
 }

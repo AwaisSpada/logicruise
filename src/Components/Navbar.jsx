@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className="lg:flex rounded-3xl lg:rounded-full justify-center lg:w-[25%] md:w-[50%] w-[80%] mx-auto sticky top-5 z-10">
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
       <div className="relative flex h-16 items-center justify-between">
         <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
           {/* Mobile menu button*/}
@@ -49,7 +49,7 @@ const Navbar = () => {
                   key={item.name}
                   to={item.href}
                   className={classNames(
-                    item.current ? 'linkShadow bg-[green] text-white' : 'linkShadow text-gray-300 hover:bg-[green]/20 hover:text-white',
+                    item.current ? 'linkShadow bg-[#36668b] text-white' : 'linkShadow text-[#36668b] hover:bg-[#36668b]/20 hover:text-white',
                     'linkShadow rounded-md px-3 py-2 font-medium cursor-pointer',
                   )}
                 >

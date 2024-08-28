@@ -68,13 +68,13 @@ const Testimonials = () => {
   return (
     <div className='text-white mt-20'>
       <div className="text-center mb-20">
-        <h4 className="text-[#ADDAB2] text-[12px]">
+        <h4 className="text-[#36668b] font-bold text-[15px]">
           T E S T I M O N I A L &nbsp; O F &nbsp; F E W &nbsp; F O L K S
         </h4>
-        <h1 className="heroheading text-4xl text-white mt-3">
+        <h1 className="heroheading text-4xl text-black mt-3">
         Word On The Street About Me
         </h1>
-        <h5 className="text-white text-[17px]">
+        <h5 className="text-black text-[17px]">
         Few words from people who collaborated with me
         </h5>
       </div>
@@ -82,7 +82,7 @@ const Testimonials = () => {
       <Slider {...settings}>
       {slides.map((x)=>(
         <div
-    class="testimonial block my-5 lg:w-[23rem] h-[350px] w-[20rem] rounded-3xl border border-[#2d3b46] text-left bg-[#0C1821]/60 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
+    class="testimonial block my-5 lg:w-[23rem] h-[350px] w-[20rem] rounded-3xl border border-[#2d3b46] text-left bg-[#36668b]/90 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white">
     <div class="p-6">
     <div className='flex gap-2'>
     <div className='bg-[yellow] rounded-[50%]'>

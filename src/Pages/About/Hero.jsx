@@ -4,7 +4,7 @@ import { Element } from 'react-scroll';
 const Hero = () => {
   return (
     <Element name='about'>
-      <div className='hero bg-contain bg-center bg-no-repeat px-4 sm:px-6 lg:px-8 py-12 lg:py-24'>
+      <div className='hero relative w-full lg:h-screen bg-cover bg-center'>
         <div className="text-center">
           <h4 className="text-[#36668b] font-semibold text-sm sm:text-base lg:text-lg mb-2">
             T H O U G H T S &nbsp; A N D &nbsp; B L O G S

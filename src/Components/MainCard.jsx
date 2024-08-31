@@ -1,72 +1,95 @@
 import React, { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import One from './MainCard/one'
-import Two from './MainCard/two'
-import Three from './MainCard/three'
-import Four from './MainCard/four'
-import Five from './MainCard/five'
-import Six from './MainCard/six'
-import Main from "./Main";
-import {gsap} from 'gsap'
-import {TweenMax, Power3, Power2, Power1, Power0} from 'gsap'
-import { useGSAP } from '@gsap/react';
+import One from './MainCard/one';
+import { gsap } from 'gsap';
+import { Power2 } from 'gsap';
 import { useInView } from "react-intersection-observer";
 
-
 const MainCard = () => {
-
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
   });
 
-      if(inView){
-        gsap.to('#maincard', {
-          duration:0.8,
-          y: -100,
-          ease: Power2.easeInOut,
-          opacity: 1,
-        });
-      }
+  if (inView) {
+    gsap.to('#maincard', {
+      duration: 0.8,
+      y: -50,
+      ease: Power2.easeInOut,
+      opacity: 1,
+    });
+  }
 
-
-  const [selectedComponent, setSelectedComponent] = useState(null);
+  const [selectedComponent, setSelectedComponent] = useState('Component1');
+  
   const renderComponent = () => {
     switch (selectedComponent) {
       case 'Component1':
-        return <One />;
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
       case 'Component2':
-        return <Two />;
-        case 'Component3':
-        return <Three />;
-        case 'Component4':
-        return <Four />;
-        case 'Component5':
-        return <Five />;
-        case 'Component6':
-        return <Six />;
-      // Add cases for other components
+        return <One title="Spadasoft develops software applications without requiring traditional" percent="87%" percentDesc="Around 87% of the businesses find it cost efficient and easilyaccessible to undergo No Code Development Services from Spadasoft." />;
+      case 'Component3':
+        return <One title="Enhance your business growth by improving your online visibility, driving targeted organic"  percent="89%" percentDesc="89% of businesses reported improved results after optimizing their websites using our SEO services" />;
+      case 'Component4':
+        return <One title="Get access to the global talent pool and drive your business forward with our cost-effective IT Outsourcing services." percent="95%" percentDesc="95% of companies experienced reduced operational costs and improved efficiency by hiring talent from Spadasoft" />;
+      case 'Component5':
+        return <One title="With a wide range of innovations in the tech industry, the emerging technologies play a crucial role in advancement" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
+      case 'Component6':
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
       default:
-        return <One/>;
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
     }
   };
+
   return (
-    <div ref={ref} id="maincard" className="lg:flex md:flex md:w-[90%] lg:w-[75%] p-1 mx-auto relative bg-[#36668b] rounded-[50px] mt-52 opacity-0">
-      <div className="left z-0 md:pl-10 md:pt-10 md:w-[100%] lg:pl-20 lg:pt-20 lg:w-[100%] text-white bg-[#36668b] rounded-[50px]">
-        <div className="lg:flex md:flex grid grid-rows-3 my-5 lg:my-0 grid-flow-col flex-col gap-2 text-sm lg:text-xl font-semibold lg:gap-[20px]">
-          <a id="list1" className="cardButton rounded-full w-[100%] mx-auto" href="#component1" onClick={() => setSelectedComponent('Component1')}>Software Development</a>
-          <a id="list2" className="cardButton rounded-full w-[100%] mx-auto" href="#component2" onClick={() => setSelectedComponent('Component2')}>No Code Development</a>
-          <a id="list3" className="cardButton rounded-full w-[100%] mx-auto"  href="#component3" onClick={() => setSelectedComponent('Component3')}>Search Engine Optimization</a>
-          <a id="list4" className="cardButton rounded-full w-[100%] mx-auto" href="#component4" onClick={() => setSelectedComponent('Component4')}>IT Outsourcing</a>
-          <a id="list5" className="cardButton rounded-full w-[100%] mx-auto" href="#component5" onClick={() => setSelectedComponent('Component5')}>Emerging Techologies</a>
-          <a id="list6" className="cardButton rounded-full w-[100%] mx-auto" href="#component6" onClick={() => setSelectedComponent('Component6')}>Advisory</a>
+    <div
+      ref={ref}
+      id="maincard"
+      className="lg:flex md:flex lg:flex-row md:flex-col items-center lg:w-4/5 md:w-11/12 p-4 mx-auto bg-[#1E2A38] rounded-2xl mt-40 opacity-0 transition-transform duration-500"
+    >
+      <div className="lg:w-1/3 md:w-full lg:pr-8 md:pr-0 flex flex-col items-center text-white bg-[#1E2A38] rounded-l-2xl lg:rounded-r-none p-4">
+        <h2 className="text-2xl lg:text-3xl font-bold mb-6">Explore Our Services</h2>
+        <div className="flex flex-col space-y-4 w-full">
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component1')}
+          >
+            Software Development
+          </button>
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component2')}
+          >
+            No Code Development
+          </button>
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component3')}
+          >
+            SEO
+          </button>
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component4')}
+          >
+            IT Outsourcing
+          </button>
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component5')}
+          >
+            Emerging Technologies
+          </button>
+          <button
+            className="bg-[#36668b] hover:bg-[#2a4d70] text-white py-3 px-6 rounded-full text-lg font-semibold transition duration-300"
+            onClick={() => setSelectedComponent('Component6')}
+          >
+            Advisory
+          </button>
         </div>
       </div>
-      <div className="z-[1]">
-      {renderComponent()}
+      <div className="lg:w-2/3 md:w-full flex-1 bg-[#f5f5f5] rounded-r-2xl lg:rounded-l-none p-6">
+        {renderComponent()}
       </div>
-        
     </div>
   );
 };

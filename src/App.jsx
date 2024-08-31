@@ -18,6 +18,7 @@ import Customers from './Pages/About/Customers'
 import Contact from './Components/Contact'
 import MainCard from './Components/MainCard'
 import Choose from './Components/Choose'
+import ScrollToTop from '../ScrollToTop';
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
 
@@ -28,6 +29,7 @@ function App() {
     <>
      <div className=''>
      <Navbar/>
+     <ScrollToTop />
      <Routes>
       <Route path='/' element={
         <>
@@ -41,7 +43,6 @@ function App() {
      <Testimonials/>
      <Reviews/>
      <AboutMe/>
-     {/* <Doubts/> */}
         </>
       }/>
       <Route path='/about' element={<>

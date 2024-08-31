@@ -17,9 +17,10 @@
   animation-timing-function: inherit;
   animation-iteration-count: infinite;
   padding: 30px;
+  font-size: 10px;
   width: 30%;
   margin-right: auto;
-  color: rgb(0, 0, 0);
+  color: white;
   margin-left: auto;
   border: 10px solid white;
     border-radius: 50%;
@@ -35,13 +36,13 @@
 @keyframes circletext {
   0% {
     border: 10px solid transparent;
-      }
+  }
   50% {
-    border: 10px solid rgb(90, 128, 166);
+    border: 10px solid rgb(12, 48, 157);
   }
   75% {
-    border: 10px solid #36668b;
-    }
+    border: 10px solid black;
+  }
   100% {
     border: 10px solid transparent;
     }
@@ -58,6 +59,14 @@
     transform: scale(1.5);
     transition: all ease 0.5s;
   }
+}
+nav {
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Optional: Add a shadow effect to enhance the sticky effect */
+nav.bg-gray-700 {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .shadowpic{
@@ -129,23 +138,6 @@ button:hover{
   font-style: normal;
   line-height: 40px;
 }
-nav{
-  --border-bottom-width: 0.5px;
-  --border-color: rgb(52, 48, 48);
-  --border-left-width: 0.5px;
-  --border-right-width: 0.5px;
-  --border-style: solid;
-  --border-top-width: 0.5px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(99, 94, 94, 0.084);
-  border-radius: 100px;
-  box-shadow: blue;
-  transform: none;
-  transform-origin: 50% 50% 0px;
-  border: 1px solid rgb(30, 17, 115);
-  opacity: 1;
-  z-index: 2;
-}
 .card1{
   background-size: 128px;
   background-repeat: repeat;
@@ -201,37 +193,49 @@ nav{
   color: black;
 }
 
+/* hero.css */
 .hero {
-  position: relative; /* Ensure the overlay will be positioned correctly */
-  overflow: hidden; /* Prevent overflow if needed */
-  background-image: url('../assets/getty_603992138_315591.jpg');
-  background-size: cover; /* Cover the entire element */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  /* Optional: set a minimum height or other styles for the .hero element */
+  position: relative;
+  background-image: url('../assets/NEUMORPHIC_CIRCLES_BACKGROUND.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  min-height: 100vh; /* Ensure it takes full viewport height */
 }
 
-/* Overlay with color and opacity */
 .hero::before {
-  content: ""; /* Required to generate the pseudo-element */
-  position: absolute; /* Position it over the background image */
-  top: 0; /* Cover the whole hero element */
-  left: 0; /* Cover the whole hero element */
-  width: 100%; /* Cover the whole hero element */
-  height: 100%; /* Cover the whole hero element */
-  background: rgba(200, 199, 199, 0.919); /* Black color with 50% opacity */
-  /* Adjust opacity by changing the alpha value (0.5 in this example) */
-  z-index: 1; /* Ensure it sits above the background image */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 61, 125, 0.364);
+  z-index: 0;
 }
 
-/* Ensure the content inside the .hero is above the overlay */
 .hero > * {
-  position: relative; /* Adjust as needed to keep content on top */
-  z-index: 2; /* Place content above the overlay */
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero > * {
+    padding: 0 1rem; /* Add padding for smaller screens */
+  }
+}
+.hero h1 {
+  font-size: 2.5rem; /* Adjust font size for smaller screens */
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
 }
 
 
-
-.sliderlogo{
-  filter: drop-shadow(0px 0px 5px white);
+#text{
+  filter: drop-shadow(0px 0px 50px black);
 }

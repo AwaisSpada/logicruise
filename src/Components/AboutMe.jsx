@@ -1,33 +1,36 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {Element} from 'react-scroll'
 
 const AboutMe = () => {
   return (
-    <div className='mx-auto mt-40 lg:p-0 p-5 lg:flex justify-center gap-[120px] md:mx-10'>
-      <div className="mb-20 lg:w-[35%]">
-        <h4 className="text-[#36668b] text-[15px] font-bold">
-          A B O U T &nbsp; U S
+    <Element name="about">
+    <div className='flex flex-col mt-10 lg:flex-row items-center lg:justify-center gap-10 lg:gap-20 px-5 lg:px-20 py-10 lg:py-20 bg-gray-700'>
+      <div className='flex-1 max-w-lg'>
+        <h4 className='text-white text-sm font-semibold uppercase'>
+          About Us
         </h4>
-        <h1 className="heroheading text-4xl text-black mt-3">
-        Who we are
+        <h1 className='text-3xl lg:text-4xl font-bold text-white mt-2'>
+          Who We Are
         </h1>
-        <h5 className="text-black text-[17px] my-5">
-        Our journey in few words
+        <h5 className='text-lg text-gray-300 my-4'>
+          Our Journey in a Few Words
         </h5>
-        <h6 className='text-black text-[15px]'>
-        We designed multiple web & mobile experiences for multi-cross-platform devices from TV to Ipads, etc. I’ve worked with small agencies and also with medium-sized companies. I previously worked with one of India’s largest Ed-Tech startups, Toppr which later got acquired by Byjus. Currently I'm designing aesthetic and functional solutions for smallcase within the invest team, to enhance financial accessibility and understanding for Indian users.
-        </h6>
-            <Link to="/about">
-        <button className='border py-2 px-5 rounded-lg bg-[#36668b] text-white mt-5'>
-        Know More &#8594;
-        </button>
+        <p className='text-gray-200 text-base'>
+          We design innovative web and mobile experiences across multiple platforms, from TVs to iPads. Our experience spans small agencies to medium-sized companies, including a significant stint with Toppr, India’s major Ed-Tech startup acquired by Byjus. Currently, we craft aesthetic and functional solutions for smallcase, enhancing financial accessibility and understanding for Indian users.
+        </p>
+        <Link to="/about">
+          <button className='mt-5 px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition duration-300 ease-in-out'>
+            Learn More &#8594;
+          </button>
         </Link>
       </div>
-      <div>
-        <img className='rotate-[15deg] md:mt-20 border-[15px] lg:w-[100%] w-[70%] mx-auto' src="https://framerusercontent.com/images/fpM2zJPCmYCK9XyV9EgI2lz0oYk.png" alt="" />
+      <div className='flex-1 max-w-lg'>
+        <img className='w-full rounded-lg shadow-lg transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500 ease-in-out' src="https://framerusercontent.com/images/fpM2zJPCmYCK9XyV9EgI2lz0oYk.png" alt="About Us" />
       </div>
     </div>
-  )
-}
+    </Element>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

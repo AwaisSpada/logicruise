@@ -1,153 +1,200 @@
-import React, {useEffect, useRef} from 'react'
-import './main.css'
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
+import React, { useEffect } from "react";
+import "./main.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useInView } from "react-intersection-observer";
-import {gsap} from 'gsap'
-import {TweenMax, Power3} from 'gsap'
-import { useGSAP } from '@gsap/react';
-import 'slick-carousel/slick/slick-theme.css';
-import { Link, Element } from 'react-scroll';
+import { gsap, Power3 } from "gsap";
+import { Element } from "react-scroll";
 
-const logos = ['https://framerusercontent.com/images/El644u0YyJGjpMkzrL7UWypGnY.png?scale-down-to=512']; 
-const words = ['ACCESSIBILITY', 'USERFRIENDLY']
+const logos = [
+  "https://framerusercontent.com/images/El644u0YyJGjpMkzrL7UWypGnY.png?scale-down-to=512",
+];
+const words = ["ACCESSIBILITY", "USERFRIENDLY"];
 
-
+// Array of gradient backgrounds
+const cardGradients = [
+  "linear-gradient(to right, #37525f , #7c8a8e)", // Example gradients
+  "linear-gradient(to right, #2f5b57 , #14385d)",
+  "linear-gradient(to right, #688582 , #043b5e)",
+  "linear-gradient(to right , #142a34, #6f9c99)",
+  "linear-gradient(135deg, #d64161, #00bfae)",
+  "linear-gradient(135deg, #00bfae, #d9bf77)",
+  "linear-gradient(135deg, #d9bf77, #f05454)",
+  "linear-gradient(135deg, #f05454, #f8b400)"
+];
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center text-white bg-transparent w-[100px] mx-auto">
-    <img  src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-10 ml-8" />
-    <h1 className='ml-10'>{words[index % words.length]}</h1>
+  <div className="flex items-center justify-center text-white bg-transparent w-24 mx-auto">
+    <img
+      src={logos[index % logos.length]}
+      alt={`Logo ${index + 1}`}
+      className="h-12 mx-4"
+    />
+    <h1 className="text-lg font-medium">{words[index % words.length]}</h1>
   </div>
 );
 
 const settings = {
   dots: false,
   infinite: true,
-  speed: 2000, // Transition speed in milliseconds
-  autoplay: true, // Auto play slides
-  autoplaySpeed: -1000, // Time between slides in milliseconds
-  slidesToShow: 6,
+  speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  slidesToShow: 4,
   slidesToScroll: 1,
   swipeToSlide: true,
   draggable: true,
   arrows: false,
-  cssEase: 'linear',
+  cssEase: "linear",
   responsive: [
     {
       breakpoint: 1024,
       settings: {
-        slidesToShow: 4,
-      }
+        slidesToShow: 3,
+      },
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 2,
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 const Main = () => {
-
   const { ref, inView } = useInView({
     triggerOnce: true,
     rootMargin: "-100px 0px",
   });
 
-      if(inView){
-        gsap.to('#heading', {
-          duration:1.5,
-          y: 30,
-          ease: Power3.easeInOut,
-          opacity: 1,
-        });
-      }
-      if(inView){
-        gsap.to('#headingcard', {
-          duration:1.5,
-          y: 30,
-          ease: Power3.easeInOut,
-          opacity: 1,
-        });
-      }
+  useEffect(() => {
+    if (inView) {
+      gsap.to("#heading", {
+        duration: 1.5,
+        y: 0,
+        ease: Power3.easeInOut,
+        opacity: 1,
+      });
+      gsap.to(".card", {
+        duration: 1.5,
+        y: 0,
+        ease: Power3.easeInOut,
+        opacity: 1,
+        stagger: 0.3,
+      });
+    }
+  }, [inView]);
 
-  
+  // Generate top values for sticky positioning
+  const getTopValue = (index) => `${(index + 1) * 90}px`;
 
   return (
-    <Element name='work'>
-      <div className='bg-[black]/30' id='works'>
-      <div ref={ref} id='heading' className={`text-center  transition-opacity ${inView ? "opacity-1" : "opacity-0"}`}>
-        <h4 className="text-[#36668b] font-bold text-[12px]">C U R A T E D &nbsp; W O R K</h4>
-        <h1 className='heroheading text-4xl text-white mt-3'>Featured Case Studies</h1>
-        <h5 className='text-white text-[17px]'>Compilation of case studies that evoke my sense of pride</h5>
-      </div>
-      <div className="cards p-2 mt-20 relative">
-      <div id='headingcard' className={`card1 opacity-0 lg:h-[40vh] xl:h-[60vh] md:h-[35vh] h-[60vh] sticky top-[10px] lg:w-[70%] md:w-[80%] mx-auto lg:flex md:flex justify-between mt-2`}>
-      <div className='cardd1 lg:w-[45%] md:w-[80%] w-[100%] lg:ml-0 ml-[-60px] lg:mt-0 md:mt-0 mt-[-30px]'>
-        <h6 className='text-[#36668b] font-bold'>AIRBNB . 2023</h6>
-        <h2 className='mainheading text-xl lg:text-3xl text-white mt-5'>Curating AR experiences while travelling</h2>
-        <hr className='lg:my-10 my-5' />
-        <li className='text-white text-sm'>Onboarding increased to 12%.</li>
-        <li className='text-white my-3 text-sm'>New users signups increased by 32%.</li>
-        <li className='text-white text-sm'>Engagement increased by 20%.</li>
-        <button className='bg-white py-2 px-5 rounded-lg mt-5'>View Case Study <span>&#8599;</span></button>
-      </div>
-      <div>
-        <img className=' lg:mr-[-200px] md:mr-[-200px] md:mt-40 md:ml-0 lg:mt-0 mt-[-50px] lg:ml-0 ml-[150px]' src="https://framerusercontent.com/images/kOfIyp0iL0qysj50U1pITZMC34.png?scale-down-to=1024" alt="" />
-      </div>
-      </div>
-      <div id='headingcard' className={`card2 opacity-0 lg:h-[40vh] xl:h-[60vh] sticky top-[110px] md:h-[35vh] h-[60vh]  lg:w-[70%] md:w-[80%] md:flex mx-auto lg:flex justify-between`}>
-      <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#36668b] font-bold'>SHOPIFY . 2023</h6>
-        <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Building profitable dropshipping dashboard</h2>
-        <h4 className='text-white lg:my-5 my-2'>
-        Aims to show you how you can start your own profitable business in just a few weeks, how company increased their MRR by 25%.
-        </h4>
-        <button className='bg-white py-2 px-5 rounded-lg mt-5'>View Case Study <span>&#8599;</span></button>
-      </div>
-      <div>
-        <img className=' top-[70px] md:mt-40 lg:w-[60%] lg:ml-0 ml-[120px] left-[700px] lg:absolute' src="https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024" alt="" />
-      </div>
-      </div>
-      <div id='headingcard' className="card3 opacity-0 lg:w-[70%] md:w-[80%] sticky top-[210px] md:h-[35vh] lg:h-[40vh] xl:h-[60vh] h-[60vh] mx-auto lg:flex md:flex justify-between">
-      <div className='cardd1 lg:w-[45%] lg:ml-0 ml-[-60px] md:mt-0 lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#36668b] font-bold'>DELLOITE . 2023</h6>
-        <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Terrific: An app that helps you find a home tutor</h2>
-        <h4 className='text-white my-5'>
-        Terrific Tutors is a mobile app which will help people (students/parents) to find a home tutor.        </h4>
-        <button className='bg-white py-2 px-5 rounded-lg mt-5'>View Case Study <span>&#8599;</span></button>
-      </div>
-      <div>
-        <img className=' lg:mr-[-200px] lg:mt-20 md:mt-40 lg:ml-0 md:ml-0 ml-[120px] my-[-50px]' src="https://framerusercontent.com/images/ohHTiq0PH6PnnqZsdmwKnCGWyXM.png?scale-down-to=1024" alt="" />
-      </div>
-      </div>
-      <div id='headingcard' className="card4 opacity-0 lg:w-[70%] md:h-[35vh] sticky top-[100px] lg:h-[40vh] xl:h-[60vh] h-[60vh] md:w-[80%] mx-auto lg:flex md:flex justify-between">
-      <div className='cardd1 lg:ml-0 ml-[-60px] lg:mt-0 mt-[-30px]'>
-        <h6 className='text-[#36668b] font-bold'>HEADOUT . 2023</h6>
-        <h2 className='mainheading lg:text-3xl text-xl text-white mt-5'>Enhancing the payment flow of Headout</h2>
-        <hr className='my-10' />
-        <li className='text-white text-sm'>Onboarding drop-offs decreased to 12%.</li>
-        <li className='text-white my-3 text-sm'>New users signups increased by 23%.</li>
-        <li className='text-white text-sm'>New users signups increased by 23%.</li>
-        <button className='bg-white py-2 px-5 rounded-lg mt-5'>View Case Study <span>&#8599;</span></button>
-      </div>
-      <div className=''>
-        <img className='lg:absolute md:absolute lg:top-[100px] lg:left-[700px] md:top-[250px] md:left-[200px] lg:mt-20 lg:w-[70%] lg:ml-0 lg:mt-0 ml-[120px] mt-[-60px]' src="https://framerusercontent.com/images/UsXg6mjbKLKzrlPJKGSAw34OCc.png?scale-down-to=1024" alt="" />
-      </div>
-      </div>
-      </div>
-      <div className="rotate-[-1deg] py-2 my-20 bg-[#36668b]">
-      <Slider {...settings}>
-        {[...Array(8).keys()].map((_, index) => (
-          <SlideItem key={index} index={index} />
-        ))}
-      </Slider>
-    </div>
-    </div>
-    </Element>
-  )
-}
+    <Element name="work">
+      <div className="bg-gray-800 py-16">
+        <div
+          ref={ref}
+          id="heading"
+          className={`text-center transition-opacity ${
+            inView ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <h4 className="text-blue-400 font-semibold text-xs uppercase tracking-wide">
+            Curated Work
+          </h4>
+          <h1 className="text-3xl lg:text-5xl font-bold text-white mt-3">
+            Featured Case Studies
+          </h1>
+          <p className="text-gray-400 text-lg mt-2">
+            Compilation of case studies that evoke my sense of pride
+          </p>
+        </div>
 
-export default Main
+        <div className="mt-16 p-4">
+          {[0, 1, 2, 3].map((index) => (
+            <div
+              key={index}
+              className="card flex md:flex-row flex-col justify-between items-center text-white p-6 rounded-lg shadow-lg mb-8 lg:w-3/4 mx-auto opacity-0 translate-y-8 transition-transform duration-1000 ease-in-out sticky"
+              style={{
+                top: getTopValue(index),
+                background: cardGradients[index % cardGradients.length],
+              }}
+            >
+              <div className="flex-1">
+                <h6 className="text-blue-400 my-5 font-bold">
+                  {index === 0
+                    ? "AIRBNB . 2023"
+                    : index === 1
+                    ? "SHOPIFY . 2023"
+                    : index === 2
+                    ? "DELOITTE . 2023"
+                    : "HEADOUT . 2023"}
+                </h6>
+                <h2 className="text-xl lg:text-2xl my-5 font-semibold mb-3">
+                  {index === 0
+                    ? "Curating AR experiences while travelling"
+                    : index === 1
+                    ? "Building profitable dropshipping dashboard"
+                    : index === 2
+                    ? "Terrific: An app that helps you find a home tutor"
+                    : "Enhancing the payment flow of Headout"}
+                </h2>
+                <p className="mb-4 mt-5">
+                  {index === 0 ? (
+                    <>
+                      Onboarding increased to 12%. <br /> New users signups
+                      increased by 32%. <br /> Engagement increased by 20%.
+                    </>
+                  ) : index === 1 ? (
+                    <>
+                      Aims to show you how you can start your own profitable{" "}
+                      <br /> business in just a few weeks, how company increased
+                      their <br /> MRR by 25%.
+                    </>
+                  ) : index === 2 ? (
+                    <>
+                      Terrific Tutors is a mobile app <br /> which will help
+                      people (students/parents) <br /> to find a home tutor.
+                    </>
+                  ) : (
+                    <>
+                      Onboarding drop-offs decreased to 12%. <br /> New users
+                      signups increased by 23%.
+                    </>
+                  )}
+                </p>
+                <button className="bg-blue-500 py-2 px-4 mt-5 rounded-lg hover:bg-blue-600 transition duration-300">
+                  View Case Study <span>&#8599;</span>
+                </button>
+              </div>
+              <img
+                className="md:w-[300px] md:p-0 p-10 h-[300px] rounded-2xl object-cover"
+                src={
+                  index === 0
+                    ? "https://framerusercontent.com/images/kOfIyp0iL0qysj50U1pITZMC34.png?scale-down-to=1024"
+                    : index === 1
+                    ? "https://framerusercontent.com/images/YAfBNcJrzSMGkcAcvQuFANAAqG0.png?scale-down-to=1024"
+                    : index === 2
+                    ? "https://framerusercontent.com/images/ohHTiq0PH6PnnqZsdmwKnCGWyXM.png?scale-down-to=1024"
+                    : "https://framerusercontent.com/images/UsXg6mjbKLKzrlPJKGSAw34OCc.png?scale-down-to=1024"
+                }
+                alt={`Case Study ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="py-4 bg-gray-900">
+          <Slider {...settings}>
+            {[...Array(8).keys()].map((_, index) => (
+              <SlideItem key={index} index={index} />
+            ))}
+          </Slider>
+        </div>
+      </div>
+    </Element>
+  );
+};
+
+export default Main;

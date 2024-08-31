@@ -1,86 +1,207 @@
-import React, {useState} from 'react'
-import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link, Element } from 'react-scroll';
-import {Link as Linkk} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Link as RouterLink, useNavigate } from 'react-router-dom'; // Import RouterLink and useNavigate
+import { Link } from 'react-scroll'; // Import Link for smooth scrolling
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import { useScroll } from './useScroll';
 
-// // Initialization for ES Users
-// import {
-//   Collapse,
-//   Dropdown,
-//   initTWE,
-// } from "tw-elements";
-
-
-const navigation = [
-  { name: 'Home', href: '/', to: 'home', current: false,smooth: true, duration: 1500, link: Linkk },
-  { name: 'Works', href: 'works', current: false, smooth: true, duration: 1500, link: Link },
-  { name: 'About', href: 'about', current: false, link: Linkk },
-  { name: 'FAQs', href: 'faq', current: false, link: Linkk },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+const pages = ['work', 'about', 'ratings', 'contact'];
 
 const Navbar = () => {
-  // initTWE({ Collapse, Dropdown });
+  const { scrollDirection, hasScrolled } = useScroll();
+  const [scrolling, setScrolling] = useState(false);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const navigate = useNavigate(); // Hook for programmatic navigation
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Function to handle Home link click with both routing and scrolling
+  const handleHomeClick = () => {
+    // Navigate to home route
+    navigate('/');
+    // Scroll to the top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100); // Small delay to ensure routing has occurred
+  };
 
   return (
-    <Disclosure as="nav" className="lg:flex rounded-3xl lg:rounded-full justify-center lg:w-[25%] md:w-[50%] w-[80%] mx-auto sticky top-5 z-10">
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
-      <div className="relative flex h-16 items-center justify-between">
-        <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          {/* Mobile menu button*/}
-          <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-            <span className="absolute -inset-0.5" />
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="block h-6 w-6 group-data-[open]:hidden" />
-            <XMarkIcon aria-hidden="true" className="hidden h-6 w-6 group-data-[open]:block" />
-          </DisclosureButton>
-        </div>
-        <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-          <div className="hidden sm:ml-6 sm:block">
-            <div className="flex space-x-4">
-              {navigation.map((item) => (
-                <item.link
-                smooth={item.smooth}
-                duration={item.duration}
-                  key={item.name}
-                  to={item.href}
-                  className={classNames(
-                    item.current ? 'linkShadow bg-[#36668b] text-white' : 'linkShadow text-[#36668b] hover:bg-[#36668b]/20 hover:text-white',
-                    'linkShadow rounded-md px-3 py-2 font-medium cursor-pointer',
-                  )}
-                >
-                  {item.name}
-                </item.link>
+    <Box
+      className={`navbar ${scrolling ? 'scrolling' : ''}`}
+      sx={{ position: 'sticky', top: 0, zIndex: 1200 }}
+    >
+      <AppBar
+        position="static"
+        sx={{
+          boxShadow: scrolling ? '0px 0px 10px rgba(0, 0, 0, 0.3)' : 'none',
+          background: scrolling ? '#1f2b4a' : 'transparent',
+          position: 'absolute',
+          transition: 'all 0.3s ease-in-out',
+        }}
+      >
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            {/* Logo for desktop view */}
+            <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+              <img src="" alt="Logo" style={{ height: '40px' }} />
+            </Box>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                ml: 2,
+                display: { xs: 'none', md: 'flex' },
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              {/* Logo text or image if needed */}
+            </Typography>
+
+            {/* Mobile Menu Icon */}
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+              <IconButton
+                size="large"
+                aria-label="open navigation menu"
+                aria-controls="menu-appbar"
+                aria-haspopup="true"
+                onClick={handleOpenNavMenu}
+                color="inherit"
+              >
+                <MenuIcon />
+              </IconButton>
+              <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                  vertical: 'bottom',
+                  horizontal: 'left',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{ display: { xs: 'block', md: 'none' } }}
+              >
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Button onClick={handleHomeClick} sx={{ color: 'inherit', textAlign: 'center' }}>
+                    Home
+                  </Button>
+                </MenuItem>
+                {pages.map((page) => (
+                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <Link to={page} smooth={true} duration={1000}>
+                      <Typography textAlign="center">{page}</Typography>
+                    </Link>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+
+            {/* Logo for mobile view */}
+            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
+              <img src="" alt="Logo" style={{ height: '40px' }} />
+            </Box>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              href="#app-bar-with-responsive-menu"
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.2rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              {/* Logo text or image if needed */}
+            </Typography>
+
+            {/* Desktop Menu Items Centered */}
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', gap: '50px' }}>
+              <Button onClick={handleHomeClick} sx={{ my: 2, color: 'white', display: 'block' }}>
+                Home
+              </Button>
+              {pages.map((page) => (
+                <Link key={page} to={page} smooth={true} duration={1000}>
+                  <Button
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
+                    {page}
+                  </Button>
+                </Link>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </Box>
 
-    <DisclosurePanel className="sm:hidden flex justify-center">
-      <div className="space-y-1 px-2 pb-3 pt-2">
-        {navigation.map((item) => (
-          <item.link
-          smooth={item.smooth}
-          duration={item.duration}
-            to={item.href}
-            className={classNames(
-              item.current ? 'bg-gray-900 text-white' : 'text-gray-300 border px-20 rounded-xl text-center hover:bg-gray-700 hover:text-white',
-              'block rounded-md px-3 py-2 text-base font-medium',
-            )}
-          >
-            {item.name}
-          </item.link>
-        ))}
-      </div>
-    </DisclosurePanel>
-  </Disclosure>
-  )
-}
+            {/* Call to Action */}
+            <Box sx={{ flexGrow: 0 }}>
+              <Link to='contact' smooth={true} duration={1000}>
+                <Box
+                  component="button"
+                  sx={{
+                    padding: { sm: '10px 20px', md: '10px 20px', xs: '5px 10px' },
+                    transition: 'all ease-in-out 0.4s',
+                    backgroundColor: 'white',
+                    color: 'black',
+                    borderRadius: '10px',
+                    cursor: 'pointer',
+                    border: '1px solid black',
+                    ":hover": {
+                      backgroundColor: 'transparent',
+                      color: 'white',
+                      border: '1px solid white',
+                    },
+                  }}
+                >
+                  Say Hi
+                </Box>
+              </Link>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </Box>
+  );
+};
 
-export default Navbar
+export default Navbar;

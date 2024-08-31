@@ -1,32 +1,35 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Typewriter from "typewriter-effect";
-import { useInView } from "react-intersection-observer";
-import './hero.css'
-import Logo1 from '../assets/electron.svg'
-import {gsap} from 'gsap'
-import {TweenMax, Power3, Power4} from 'gsap'
-import { useGSAP } from '@gsap/react';
-import { Link, Element } from 'react-scroll';
+import Typewriter from 'typewriter-effect';
+import { Element } from 'react-scroll';
+import './hero.css'; // Ensure this file has appropriate styles
+import { gsap, Power4 } from 'gsap';
 
-const logos = ['https://cdna.iconscout.com/img/duolingo.389f11b.svg', 'https://cdna.iconscout.com/img/uber.314ad21.svg', 'https://cdna.iconscout.com/img/microsoft.c051f44.svg', 'https://cdna.iconscout.com/img/airbnb.69a8173.svg', 'https://cdna.iconscout.com/img/google.c0129cb.svg', 'https://cdna.iconscout.com/img/amazon.90c4794.svg', 'https://cdna.iconscout.com/img/disney.042cf1c.svg', 'https://cdna.iconscout.com/img/instacart.d64c895.svg']; 
-
-
+const logos = [
+  'https://cdna.iconscout.com/img/duolingo.389f11b.svg',
+  'https://cdna.iconscout.com/img/uber.314ad21.svg',
+  'https://cdna.iconscout.com/img/microsoft.c051f44.svg',
+  'https://cdna.iconscout.com/img/airbnb.69a8173.svg',
+  'https://cdna.iconscout.com/img/google.c0129cb.svg',
+  'https://cdna.iconscout.com/img/amazon.90c4794.svg',
+  'https://cdna.iconscout.com/img/disney.042cf1c.svg',
+  'https://cdna.iconscout.com/img/instacart.d64c895.svg'
+];
 
 const SlideItem = ({ index }) => (
-  <div className="sliderlogo flex items-center justify-center mt-20 w-[100px] mx-auto">
-    <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-full max-w-full" />
+  <div className="slider-logo flex items-center justify-center mx-2 lg:mx-4">
+    <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-16 max-w-full" />
   </div>
 );
 
 const settings = {
   dots: false,
   infinite: true,
-  speed: 800, // Transition speed in milliseconds
-  autoplay: true, // Auto play slides
-  autoplaySpeed: 2000, // Time between slides in milliseconds
+  speed: 800,
+  autoplay: true,
+  autoplaySpeed: 2000,
   slidesToShow: 5,
   slidesToScroll: 1,
   swipeToSlide: true,
@@ -45,97 +48,66 @@ const settings = {
       settings: {
         slidesToShow: 2,
       }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      }
     }
   ]
 };
 
 const Hero = () => {
-
   useEffect(() => {
-    gsap.to('#logo', {
-      duration: 1,
-      y: -30,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
-    gsap.to('#text', {
-      duration: 0.8,
-      y: -40,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
-    gsap.to('#smtext', {
-      duration: 1.3,
-      y: -40,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
-    gsap.to('#button1', {
-      duration: 2.6,
-      x: 40,
-      y: -40,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
-    gsap.to('#button2', {
-      duration: 2.6,
-      x: -40,
-      y: -40,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
-    gsap.to('#slider', {
-      duration: 3,
-      y: -40,
-      ease: Power4.easeInOut,
-      opacity: 1,
-    });
+    gsap.fromTo('#logo', { y: 30, opacity: 0 }, { duration: 1, y: 0, ease: Power4.easeInOut, opacity: 1 });
+    gsap.fromTo('#text', { y: 30, opacity: 0 }, { duration: 0.8, y: 0, ease: Power4.easeInOut, opacity: 1 });
+    gsap.fromTo('#smtext', { y: 30, opacity: 0 }, { duration: 1.3, y: 0, ease: Power4.easeInOut, opacity: 1 });
+    gsap.fromTo('#button1', { x: -40, y: 40, opacity: 0 }, { duration: 2.6, x: 0, y: 0, ease: Power4.easeInOut, opacity: 1 });
+    gsap.fromTo('#button2', { x: 40, y: 40, opacity: 0 }, { duration: 2.6, x: 0, y: 0, ease: Power4.easeInOut, opacity: 1 });
+    gsap.fromTo('#slider', { y: 40, opacity: 0 }, { duration: 3, y: 0, ease: Power4.easeInOut, opacity: 1 });
   }, []);
-  
 
   return (
     <Element name='home'>
-      <div className='hero w-[100%] mx-auto relative mt-[-270px]'>
-      <div className='flex justify-center'>
-        {/* <div id='logo' className="logodiv lg:mt-[100px] mt-[50px] opacity-0">
-      <img className='headlogo w-14 ml-[90px] rotate-1' src="https://framerusercontent.com/images/K87K8oWoMPCJBJmyQKbXXvzbxdA.png" alt="" />
-      <h5 className='before text-white bg-[#06160A] py-3 pr-5 pl-10 rounded-2xl'>
-      Available for opportunities
-      </h5>
-        </div> */}
+      <div className='hero relative w-full lg:h-screen bg-cover bg-center'>
+        <div className='absolute inset-0 bg-black bg-opacity-50'></div>
+        <div className='relative z-10 flex flex-col items-center justify-center h-full px-4'>
+          <h5 id='text' className='text-center text-white font-bold lg:text-6xl md:text-4xl text-3xl opacity-0 mt-20'>
+            Navigating Your Digital Future
+          </h5>
+          <h1 id='text' className='circle-text relative text-center mb-10 font-semibold text-white mt-5 opacity-0'>
+            Revolutionize
+          </h1>
+          <h6 id='text' className='text-center text-blue-400 font-bold opacity-0 lg:text-4xl md:text-3xl text-2xl'>
+            Crafting Digital Excellence with Precision and Innovation.
+          </h6>
+          <h1 id='text' className="text-center text-3xl text-white font-semibold mt-5">
+            <Typewriter
+              options={{
+                strings: [
+                  'Innovate',
+                  'Create',
+                  'Transform'
+                ],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 10,
+              }}
+            />
+          </h1>
+          <h2 id='text' className='text-center my-5 text-white text-xl'>Transforming Ideas into Digital Solutions.</h2>
+          <div id='slider' className="w-full lg:w-4/5 mx-auto opacity-0 mt-10">
+            <Slider {...settings}>
+              {[...Array(8).keys()].map((_, index) => (
+                <SlideItem key={index} index={index} />
+              ))}
+            </Slider>
+          </div>
+        </div>
       </div>
-      <h5 id='text' className=' text-center text-[black] font-bold  lg:text-6xl text-3xl opacity-0 mt-[400px]'>
-      One Stop Shop for All Your 
-        </h5>
-        <h1 className='circle-text relative text-center mb-20 text-5xl font-semibold text-[black]'>Digital Needs !</h1>
-        <h6 id='smtext' className='text-center text-[black] opacity-0 text-4xl'>
-        Hire Now! An Individual or a team from our talent pool for your
-        </h6>
-        <h1 className="text-center text-3xl text-[#36668b] font-semibold ">
-                  <Typewriter
-                    options={{
-                      strings: [
-                        'Enterprise',
-                        'Startup',
-                        'Growth Company'
-                      ],
-                      autoStart: true,
-                      loop: true,
-                      deleteSpeed: 10,
-                    }}
-                  />
-                </h1>
-                <h2 className='text-center my-5 text-black text-xl'>The best brands choose Spadasoft</h2>
-        <div id='slider' className="mx-auto lg:w-[70%] opacity-0">
-      <Slider {...settings}>
-        {[...Array(8).keys()].map((_, index) => (
-          <SlideItem key={index} index={index} />
-        ))}
-      </Slider>
-    </div>
-    </div>
     </Element>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

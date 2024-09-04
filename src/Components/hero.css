@@ -10,7 +10,7 @@
 }
 
 
-.circle-text{
+/* .circle-text{
   animation-name: circletext;
   animation-duration: 5s;
   transition: all ease-in-out 1.5s;
@@ -24,7 +24,7 @@
   margin-left: auto;
   border: 10px solid white;
     border-radius: 50%;
-}
+} */
 @media screen and (max-width: 900px) {
   .circle-text{
     border: none;
@@ -193,15 +193,15 @@ button:hover{
   color: black;
 }
 
-/* hero.css */
+/* hero.css
 .hero {
   position: relative;
-  background-image: url('../assets/NEUMORPHIC_CIRCLES_BACKGROUND.jpg');
+  background-image: url('../assets/giphy.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
-}
+} */
 
 .hero::before {
   content: "";
@@ -210,7 +210,7 @@ button:hover{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 61, 125, 0.364);
+  background-color: rgba(0, 0, 0, 0.419);
   z-index: 0;
 }
 
@@ -247,4 +247,25 @@ button:hover{
 body{
   max-width: 1550px;
   margin: 0 auto;
+}
+
+.background-video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.navLogo{
+  
 }

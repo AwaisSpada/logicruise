@@ -67,7 +67,7 @@ const Contact = () => {
       <div className='lg:w-[45%]'>
         <h1 className='font-bold text-5xl'>Partner With us & Get Your Quote</h1>
         <h5 className='text-xl my-5'>When you partner with Sapdasoft, we take care of the heavy lifting, so you can enjoy more website traffic, leads, and revenue.</h5>
-        <a href="" className='text-xl font-bold'>Email us at: info@spadasoft.com</a>
+        <a href="" className='text-xl font-bold'>Email us at: info@Logicruise.com</a>
         <div className='flex gap-8 my-10 text-lg flex-row'>
         <div>
         <li className='mt-3'>Client-oriented</li>

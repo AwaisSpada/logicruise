@@ -4,17 +4,17 @@ const Customers = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
     {
-    one:"I am extremely satisfied with the MERN stack development services provided by Spadasoft. The level of backend architecture and attention to detail displayed by their team was outstanding, surpassing excellence and exemplifying extraordinary expertise.",
+    one:"I am extremely satisfied with the MERN stack development services provided by Logicruise. The level of backend architecture and attention to detail displayed by their team was outstanding, surpassing excellence and exemplifying extraordinary expertise.",
     tow:"SpencerParikh",
     three:"Io Audio"
     },
     {
-      one:"Our team had a wonderful experience with Spadasoft. The team presented numerous effective solutions and completed the task ahead of schedule. Communication was seamless through various channels, including chat, phone, and video.",
+      one:"Our team had a wonderful experience with Logicruise. The team presented numerous effective solutions and completed the task ahead of schedule. Communication was seamless through various channels, including chat, phone, and video.",
       tow:"Kris Corter",
       three:"Cortergroup"
       },
       {
-        one:"Spadasoft consistently produced outstanding results across a variety of projects. Furthermore, we expanded our collaboration into web development, where the team's performance was excellent. We plan to engage with their services again.",
+        one:"Logicruise consistently produced outstanding results across a variety of projects. Furthermore, we expanded our collaboration into web development, where the team's performance was excellent. We plan to engage with their services again.",
         tow:"Steven Malagon",
         three:"SolvewithTech"
         },
@@ -75,7 +75,7 @@ const Customers = () => {
       </button>
       </div>
         <div>
-            <img className='arrowimg lg:mt-0 md:mt-0 mt-40 p-5' src="https://spadasoft.com/wp-content/uploads/2023/05/Line-arrow-2-1.svg" alt="" />
+            <img className='arrowimg lg:mt-0 md:mt-0 mt-40 p-5' src="https://Logicruise.com/wp-content/uploads/2023/05/Line-arrow-2-1.svg" alt="" />
         </div>
       </div>
     </div>

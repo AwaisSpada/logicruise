@@ -6,21 +6,17 @@ import Typewriter from 'typewriter-effect';
 import { Element } from 'react-scroll';
 import './hero.css'; // Ensure this file has appropriate styles
 import { gsap, Power4 } from 'gsap';
+import bgvid from '../assets/bgvid.mp4'
 
 const logos = [
-  'https://cdna.iconscout.com/img/duolingo.389f11b.svg',
-  'https://cdna.iconscout.com/img/uber.314ad21.svg',
-  'https://cdna.iconscout.com/img/microsoft.c051f44.svg',
-  'https://cdna.iconscout.com/img/airbnb.69a8173.svg',
-  'https://cdna.iconscout.com/img/google.c0129cb.svg',
-  'https://cdna.iconscout.com/img/amazon.90c4794.svg',
-  'https://cdna.iconscout.com/img/disney.042cf1c.svg',
-  'https://cdna.iconscout.com/img/instacart.d64c895.svg'
+  'upwork',
+  'linkedin',
+  'facebook'
 ];
 
 const SlideItem = ({ index }) => (
-  <div className="slider-logo flex items-center justify-center mx-2 lg:mx-4">
-    <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-16 max-w-full" />
+  <div className="slider-logo flex items-center justify-center text-5xl text-white mx-2 lg:mx-4">
+    <i className={`fa-brands fa-${logos[index % logos.length]}`}></i>
   </div>
 );
 
@@ -70,7 +66,11 @@ const Hero = () => {
 
   return (
     <Element name='home'>
-      <div className='hero relative w-full lg:h-screen bg-cover bg-center'>
+      <div id='background-video-container' className='hero relative w-full lg:h-screen bg-cover bg-center'>
+      <video autoPlay muted loop className="background-video">
+        <source src={bgvid} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
         <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         <div className='relative z-10 flex flex-col items-center justify-center h-full px-4'>
           <h5 id='text' className='text-center text-white font-bold lg:text-6xl md:text-4xl text-3xl opacity-0 mt-20'>

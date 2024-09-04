@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const slides = [
   {
-    one: "Syed is one of the best, hard-working, passionate, and respectful people you can work with on Fiverr. His work was exceptional, providing amazing work on a platform he was somewhat unfamiliar with which utilised the Chrome CEF. Second, the work was done blazing fast which was unexpected for the amount of work. Third, his prices beat almost everyone on the market, and for the quality of work I wouldn't have been surprised if he charged much more. Fourth and final point, Syed’s timelines was unbeatable. He wanted to have meeting every day to discuss his progress and so that he could do revisions as we go, which even I couldn't keep up with. If you need react development, go with Syed!",
+    one: "Logicruise is one of the best, hard-working, passionate, and respectful people you can work with on Fiverr. His work was exceptional, providing amazing work on a platform he was somewhat unfamiliar with which utilised the Chrome CEF. Second, the work was done blazing fast which was unexpected for the amount of work. Third, his prices beat almost everyone on the market, and for the quality of work I wouldn't have been surprised if he charged much more. Fourth and final point, Logicruise’s timelines was unbeatable. He wanted to have meeting every day to discuss his progress and so that he could do revisions as we go, which even I couldn't keep up with. If you need react development, go with Logicruise!",
     tow: "abdu_sizz",
     three: "Egypt"
   },
@@ -15,7 +15,7 @@ const slides = [
     three: "Canada"
   },
   {
-    one: "Syed is very cooperative and well-behaved, demonstrating great dedication to the project. He delivered exceptional, high-quality work.",
+    one: "Logicruise is very cooperative and well-behaved, demonstrating great dedication to the project. He delivered exceptional, high-quality work.",
     tow: "t11ger",
     three: "United Kingdom"
   },

@@ -127,7 +127,7 @@ const Reviews = () => {
           </Link>
         </div>
         <div className="text-center mt-10">
-          <img className="mx-auto mb-5" src="https://spadasoft.com/wp-content/uploads/2023/05/Line-arrow-2-1.svg" alt="Arrow" />
+          <img className="mx-auto mb-5" src="https://Logicruise.com/wp-content/uploads/2023/05/Line-arrow-2-1.svg" alt="Arrow" />
           <div className='absolute left-5 lg:bottom-10 bottom-20'>
             <span className="fa fa-star checked text-orange-400 ml-1"></span>
             <span className="fa fa-star checked text-orange-400 ml-1"></span>

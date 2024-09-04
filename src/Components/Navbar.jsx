@@ -12,6 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useScroll } from './useScroll';
+import logo from '../assets/logo.png'
 
 const pages = ['work', 'about', 'ratings', 'contact'];
 
@@ -70,7 +71,7 @@ const Navbar = () => {
           <Toolbar disableGutters>
             {/* Logo for desktop view */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-              <img src="" alt="Logo" style={{ height: '40px' }} />
+              <img src={logo} alt="Logo" style={{ backgroundColor: 'transparent', width: '100px', height: '100px' }} />
             </Box>
             <Typography
               variant="h6"
@@ -135,7 +136,7 @@ const Navbar = () => {
 
             {/* Logo for mobile view */}
             <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-              <img src="" alt="Logo" style={{ height: '40px' }} />
+              <img src={logo} alt="Logo" style={{ height: '100px' }} />
             </Box>
             <Typography
               variant="h5"

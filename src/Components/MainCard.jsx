@@ -24,19 +24,19 @@ const MainCard = () => {
   const renderComponent = () => {
     switch (selectedComponent) {
       case 'Component1':
-        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Logicruise offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
       case 'Component2':
-        return <One title="Spadasoft develops software applications without requiring traditional" percent="87%" percentDesc="Around 87% of the businesses find it cost efficient and easilyaccessible to undergo No Code Development Services from Spadasoft." />;
+        return <One title="Logicruise develops software applications without requiring traditional" percent="87%" percentDesc="Around 87% of the businesses find it cost efficient and easilyaccessible to undergo No Code Development Services from Logicruise." />;
       case 'Component3':
         return <One title="Enhance your business growth by improving your online visibility, driving targeted organic"  percent="89%" percentDesc="89% of businesses reported improved results after optimizing their websites using our SEO services" />;
       case 'Component4':
-        return <One title="Get access to the global talent pool and drive your business forward with our cost-effective IT Outsourcing services." percent="95%" percentDesc="95% of companies experienced reduced operational costs and improved efficiency by hiring talent from Spadasoft" />;
+        return <One title="Get access to the global talent pool and drive your business forward with our cost-effective IT Outsourcing services." percent="95%" percentDesc="95% of companies experienced reduced operational costs and improved efficiency by hiring talent from Logicruise" />;
       case 'Component5':
         return <One title="With a wide range of innovations in the tech industry, the emerging technologies play a crucial role in advancement" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
       case 'Component6':
-        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Logicruise offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
       default:
-        return <One title="Get customized solutions to fulfill your software development needs." desc="Spadasoft offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
+        return <One title="Get customized solutions to fulfill your software development needs." desc="Logicruise offers a variety of custom software development solutions, including:" percent="98%" percentDesc="A success rate of 98% has been achieved by providing custom software development services globally." />;
     }
   };
 

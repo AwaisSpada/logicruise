@@ -26,7 +26,7 @@ const AboutMe = () => {
         </Link>
       </div>
       <div className='flex-1 max-w-lg'>
-        <img className='w-full rounded-lg shadow-lg transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500 ease-in-out' src="https://framerusercontent.com/images/fpM2zJPCmYCK9XyV9EgI2lz0oYk.png" alt="About Us" />
+        <img className='w-full rounded-lg shadow-lg transform rotate-[-5deg] hover:rotate-0 transition-transform duration-500 ease-in-out' src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/05/28/14/employee-first-day-stock.jpg" alt="About Us" />
       </div>
     </div>
     </Element>

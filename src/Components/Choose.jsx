@@ -11,7 +11,7 @@ const Choose = () => {
     const contentMap = {
         0: {
             title: "Human Centric Organization",
-            description: "Spadasoft is your trusted partner in leveraging the latest technology trends. Our data-driven team of experts helps our clients achieve their desired results. We believe that building long-term partnerships with our clients is the only way to deliver exceptional results."
+            description: "Logicruise is your trusted partner in leveraging the latest technology trends. Our data-driven team of experts helps our clients achieve their desired results. We believe that building long-term partnerships with our clients is the only way to deliver exceptional results."
         },
         1: {
             title: "Innovative Solutions",
@@ -88,7 +88,7 @@ const Choose = () => {
             <div className='container mx-auto text-white'>
                 <div className='lg:flex lg:gap-12 flex-col-reverse lg:flex-row'>
                     <div className="left lg:w-1/2">
-                        <h1 id='choose1' className='text-3xl md:text-4xl font-bold text-[#36668b] mb-4 md:mb-6'>Why Choose Spadasoft?</h1>
+                        <h1 id='choose1' className='text-3xl md:text-4xl font-bold text-[#36668b] mb-4 md:mb-6'>Why Choose Logicruise?</h1>
                         <p id='choose2' className='text-base md:text-lg mb-4 md:mb-6'>
                             Our innovative solutions using cutting-edge technology equip our clients to stay ahead of the curve in this ever-changing technological landscape. Whether you are a small-scale business or a large enterprise, our years of experience have taught us to deliver the right solution tailored to your unique needs.
                         </p>

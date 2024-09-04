@@ -4,15 +4,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const logos = [
-  'https://spadasoft.com/wp-content/uploads/2023/10/Ads.svg',
-  'https://spadasoft.com/wp-content/uploads/2023/10/iecl.svg',
-  'https://spadasoft.com/wp-content/uploads/2023/05/gewch.svg',
-  'https://spadasoft.com/wp-content/uploads/2023/05/make-the-dot-1.svg',
-  'https://spadasoft.com/wp-content/uploads/2023/10/Solaire.svg'
+  'https://Logicruise.com/wp-content/uploads/2023/10/Ads.svg',
+  'https://Logicruise.com/wp-content/uploads/2023/10/iecl.svg',
+  'https://Logicruise.com/wp-content/uploads/2023/05/gewch.svg',
+  'https://Logicruise.com/wp-content/uploads/2023/05/make-the-dot-1.svg',
+  'https://Logicruise.com/wp-content/uploads/2023/10/Solaire.svg'
 ];
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center h-20 bg-white mx-auto p-4">
+  <div className="flex items-center justify-center h-20 bg-blue-800 mx-auto p-4">
     <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-12 max-w-full" />
   </div>
 );
@@ -76,7 +76,7 @@ const Services = () => {
       </div>
       <div className='mx-auto mt-40 text-blue-500 font-bold'>
         <h5 className='font-semibold mb-10 text-center'>OUR CLIENTS</h5>
-        <div id='slider' className="mx-auto w-full">
+        <div id='slider' className="mx-auto w-full bg-blue-800">
           <Slider {...settings}>
             {[...Array(8).keys()].map((_, index) => (
               <SlideItem key={index} index={index} />

@@ -41,8 +41,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_lysrfvi', 'template_hdgy2hq', form.current, {
-        publicKey: 'jEDHb_ZtdIW4uthcE',
+      .sendForm('service_rmp4dne', 'template_4wm2eds', form.current, {
+        publicKey: 'LLbbwDtkBniJFfSUN',
       })
       .then(
         () => {
@@ -66,8 +66,8 @@ const Contact = () => {
       <div className='lg:flex justify-center bg-black text-white pt-20 pb-40 mt-40 rounded-t-[50px] lg:px-20 px-5 mb-[-200px]'>
       <div className='lg:w-[45%]'>
         <h1 className='font-bold text-5xl'>Partner With us & Get Your Quote</h1>
-        <h5 className='text-xl my-5'>When you partner with Sapdasoft, we take care of the heavy lifting, so you can enjoy more website traffic, leads, and revenue.</h5>
-        <a href="" className='text-xl font-bold'>Email us at: info@Logicruise.com</a>
+        <h5 className='text-xl my-5'>When you partner with Logicruise, we take care of the heavy lifting, so you can enjoy more website traffic, leads, and revenue.</h5>
+        <a href="" className='text-xl font-bold'>Email us at: syedawais.24@hotmail.com</a>
         <div className='flex gap-8 my-10 text-lg flex-row'>
         <div>
         <li className='mt-3'>Client-oriented</li>

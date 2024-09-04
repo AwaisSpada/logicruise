@@ -12,7 +12,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { useScroll } from './useScroll';
-import logo from '../assets/logo.png'
+// import logo from '../assets/logo.png'
+import logo from '../assets/1.svg'
 
 const pages = ['work', 'about', 'ratings', 'contact'];
 

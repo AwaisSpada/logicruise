@@ -10,7 +10,7 @@ import { Element } from "react-scroll";
 const logos = [
   "https://framerusercontent.com/images/El644u0YyJGjpMkzrL7UWypGnY.png?scale-down-to=512",
 ];
-const words = ["ACCESSIBILITY", "USERFRIENDLY"];
+const words = ["ACCESSIBILITY", "USERFRIENDLY", "RELIABILITY", "SCALABILITY", "FLEXIBILITY", "INCLUSIVITY", "SUSTAINABILITY", "MAINTAINABILITY"];
 
 // Array of gradient backgrounds
 const cardGradients = [
@@ -38,9 +38,9 @@ const SlideItem = ({ index }) => (
 const settings = {
   dots: false,
   infinite: true,
-  speed: 1000,
+  speed:5000,
   autoplay: true,
-  autoplaySpeed: 3000,
+  autoplaySpeed: -3000,
   slidesToShow: 4,
   slidesToScroll: 1,
   swipeToSlide: true,

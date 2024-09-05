@@ -40,7 +40,7 @@ const Choose = () => {
         }
     };
 
-    const buttons = ["Button", "Button", "Button"];
+    const buttons = ["Organization", "Solutions", "Guidance"];
     const { title, description } = contentMap[activeIndex] || contentMap[0];
 
     const { ref, inView } = useInView({

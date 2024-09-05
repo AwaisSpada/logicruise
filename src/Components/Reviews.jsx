@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Element } from 'react-scroll';
+import lineArrow from '../assets/lineArrow.svg'
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,60 +43,57 @@ const Reviews = () => {
   return (
     <Element name="ratings">
       <div className="bg-white text-gray-700">
-      <div className="text-center mb-20 mt-20">
+      <div className="text-center mb-10 mt-20">
         <h4 className="text-gray-500 text-sm font-bold">
-          S O M E &nbsp; D O U B T S
+          R E V I E W S
         </h4>
-        <h1 className="text-4xl font-bold mt-3">
-          Frequently Asked Questions
+        <h1 className="text-4xl font-bold mt-1">
+        What Our Clients Say About Us
         </h1>
-        <h5 className="text-gray-600 text-lg">
-          Your answers await right here
-        </h5>
       </div>
       
-      <div className="flex lg:flex-row flex-col item-center gap-10 justify-center lg:gap-20 p-5 w-[200px] mx-auto">
-        <div className="lg:flex flex-col items-center">
-          <div className="border border-gray-700 p-5 w-40 rounded-full">
-            <h2 className="border border-gray-300 border-3 p-14 rounded-full text-4xl text-center font-bold relative">
-              <span className="absolute left-5 top-5">300+</span>
-              <i className="fa fa-arrow-up text-gray-500 text-2xl bottom-5 left-[50px] absolute"></i>
-            </h2>
-          </div>
-          <h2 className="mt-5 text-center text-gray-700 hidden lg:flex">Completed Projects</h2>
-          <h2 className="mt-5 text-center text-gray-700 lg:hidden">Completed Projects</h2>
-        </div>
+      <div className="flex flex-col items-center md:flex-row md:justify-center gap-10 md:gap-10 lg:gap-20 p-5 w-full mx-auto">
+  <div className='flex flex-col items-center md:flex-row md:justify-center gap-10 md:gap-10 lg:gap-20 lg:ml-2'>
+  <div className="flex flex-col items-center">
+    <div className="border border-gray-700 p-5 w-40 rounded-full mx-auto">
+      <h2 className="border border-gray-300 p-14 rounded-full text-4xl text-center font-bold relative">
+        <span className="absolute left-5 top-5">300+</span>
+        <i className="fa fa-arrow-up text-gray-500 text-2xl bottom-5 left-[50px] absolute"></i>
+      </h2>
+    </div>
+    <h2 className="mt-5 text-center text-gray-700">Completed Projects</h2>
+  </div>
 
-        <div className="lg:flex flex-col items-center">
-          <div className="border border-gray-700 p-5 my-5 lg:my-0 w-40 rounded-full">
-            <h2 className="border border-gray-300 border p-14 rounded-full text-4xl text-center font-bold relative">
-              <span className="absolute left-9 top-5">50</span>
-              <i className="fa fa-arrow-up text-green-500 text-2xl bottom-5 left-[50px] absolute"></i>
-            </h2>
-          </div>
-          <h2 className="mt-5 text-center text-gray-700 hidden lg:flex">Awards Won</h2>
-          <h2 className="mt-5 text-center text-gray-700 lg:hidden">Awards Won</h2>
-        </div>
+  <div className="flex flex-col items-center">
+    <div className="border border-gray-700 p-5 my-5 md:my-0 w-40 rounded-full mx-auto">
+      <h2 className="border border-gray-300 p-14 rounded-full text-4xl text-center font-bold relative">
+        <span className="absolute left-9 top-5">50</span>
+        <i className="fa fa-arrow-up text-green-500 text-2xl bottom-5 left-[50px] absolute"></i>
+      </h2>
+    </div>
+    <h2 className="mt-5 text-center text-gray-700">Awards Won</h2>
+  </div>
 
-        <div className="lg:flex flex-col items-center">
-          <div className="border border-gray-700 p-5 w-40 my-5 lg:my-0 rounded-full">
-            <h2 className="border border-gray-300 border p-14 rounded-full text-4xl text-center font-bold relative">
-              <span className="absolute left-8 top-5">81+</span>
-              <i className="fa fa-arrow-up text-gray-500 text-2xl bottom-5 left-[50px] absolute"></i>
-            </h2>
-          </div>
-          <h2 className="mt-5 text-center text-gray-700 hidden lg:flex">Skilled Professionals</h2>
-          <h2 className="mt-5 text-center text-gray-700 lg:hidden">Skilled Professionals</h2>
-        </div>
+  <div className="flex flex-col items-center">
+    <div className="border border-gray-700 p-5 w-40 my-5 md:my-0 rounded-full mx-auto">
+      <h2 className="border border-gray-300 p-14 rounded-full text-4xl text-center font-bold relative">
+        <span className="absolute left-8 top-5">81+</span>
+        <i className="fa fa-arrow-up text-gray-500 text-2xl bottom-5 left-[50px] absolute"></i>
+      </h2>
+    </div>
+    <h2 className="mt-5 text-center text-gray-700">Skilled Professionals</h2>
+  </div>
 
-        <div className="py-5 mt-5 w-[300px] lg:ml-0 mx-[-70px] lg:mt-0 px-16 rounded-2xl bg-gray-100 text-center">
-          <h2 className="text-4xl font-bold mb-2 text-gray-700">200+</h2>
-          <h5 className="text-gray-600">Satisfied Clients</h5>
-          <Link to='contact' smooth={true} duration={1500}>
-            <button className="my-5 py-4 px-14 bg-gray-700 text-white rounded-full">Contact Now</button>
-          </Link>
-        </div>
-      </div>
+  <div className="py-5 mt-5 w-[300px] lg:ml-0 md:mx-auto lg:mt-0 rounded-2xl bg-gray-100 text-center">
+    <h2 className="text-4xl font-bold mb-2 text-gray-700">200+</h2>
+    <h5 className="text-gray-600">Satisfied Clients</h5>
+    <Link to='contact' smooth={true} duration={1500}>
+      <button className="my-5 py-1 px-10 bg-gray-700 text-white rounded-full">Contact Now</button>
+    </Link>
+  </div>
+  </div>
+</div>
+
 
       <div className="relative lg:w-4/5 w-11/12 mx-auto bg-gray-100 py-10 px-5 rounded-2xl mt-20">
         <div className="lg:w-1/2 overflow-hidden">
@@ -127,7 +125,7 @@ const Reviews = () => {
           </Link>
         </div>
         <div className="text-center mt-10">
-          <img className="mx-auto mb-5" src="https://Logicruise.com/wp-content/uploads/2023/05/Line-arrow-2-1.svg" alt="Arrow" />
+          <img className="mx-auto mb-5" src={lineArrow} alt="Arrow" />
           <div className='absolute left-5 lg:bottom-10 bottom-20'>
             <span className="fa fa-star checked text-orange-400 ml-1"></span>
             <span className="fa fa-star checked text-orange-400 ml-1"></span>

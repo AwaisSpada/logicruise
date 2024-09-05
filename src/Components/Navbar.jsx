@@ -72,7 +72,9 @@ const Navbar = () => {
           <Toolbar disableGutters>
             {/* Logo for desktop view */}
             <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
-              <img src={logo} alt="Logo" style={{ backgroundColor: 'transparent', width: '100px', height: '100px' }} />
+              <RouterLink to='/'>
+              <img className='navLogo' src={logo} alt="Logo" style={{ backgroundColor: 'transparent', width: '100px', height: '100px' }} />
+              </RouterLink>
             </Box>
             <Typography
               variant="h6"

@@ -75,10 +75,11 @@ nav.bg-gray-700 {
 
 button:hover{
   background-color: transparent;
-  border: 1px solid black;
-  color: black;
+  border: 1px solid #36668b;
+  color: #36668b;
   transition: all ease-in-out 1s;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
+  scale: 1.1;
   font-weight: 700;
   /* animation-name: buttonanim;
   animation-duration: 1s; */
@@ -210,7 +211,7 @@ button:hover{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.419);
+  background-color: rgba(0, 0, 0, 0.315);
   z-index: 0;
 }
 
@@ -264,8 +265,4 @@ body{
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
-
-.navLogo{
-  
 }

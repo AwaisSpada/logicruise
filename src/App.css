@@ -5,3 +5,12 @@ body{
     background-repeat: no-repeat;
     background-size: contain; */
 }
+
+.scrollable {
+    overflow-y: auto;
+  }
+  
+  .no-scroll {
+    overflow-y: hidden;
+  }
+  

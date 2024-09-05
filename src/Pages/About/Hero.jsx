@@ -14,7 +14,7 @@ const Hero = () => {
   }, []);
   return (
     <Element name='about'>
-      <div className='hero relative w-full lg:h-screen bg-cover bg-center'>
+      <div className='hero relative w-full lg:h-screen bg-cover bg-center px-24'>
       <video autoPlay muted loop className="background-video">
         <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.

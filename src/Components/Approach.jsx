@@ -1,5 +1,5 @@
 import React from 'react';
-import { gsap, Power2 } from 'gsap';
+import { gsap, Power2, Power3 } from 'gsap';
 import { useInView } from 'react-intersection-observer';
 
 const Approach = () => {
@@ -13,17 +13,17 @@ const Approach = () => {
       gsap.fromTo(
         '#approach',
         { y: 50, opacity: 0 },
-        { duration: 1.5, y: 0, opacity: 1, ease: Power2.easeInOut }
+        { duration: 1, y: -50, opacity: 1, ease: Power3.easeInOut }
       );
       gsap.fromTo(
         '#approach1',
         { opacity: 0 },
-        { duration: 1.5, opacity: 1, ease: Power2.easeInOut, delay: 0.5 }
+        { duration: 1, opacity: 1, ease: Power3.easeInOut, delay: 0.3 }
       );
       gsap.fromTo(
         '#approach2',
         { opacity: 0 },
-        { duration: 1.5, opacity: 1, ease: Power2.easeInOut, delay: 1 }
+        { duration: 1, opacity: 1, ease: Power3.easeInOut, delay: 0.3 }
       );
     }
   }, [inView]);
@@ -31,8 +31,8 @@ const Approach = () => {
   return (
     <div ref={ref} id='approach' className='flex flex-col lg:flex-row justify-between text-[#1E3A8A] opacity-0 md:p-20 p-10 mb-20'>
       <div id='approach1' className='lg:w-[45%]'>
-        <h2 className='text-lg font-semibold text-[#1D4ED8] mb-3'>OUR APPROACH</h2>
-        <h1 className='text-2xl lg:text-4xl font-extrabold leading-tight text-[#1E3A8A]'>
+        <h2 className='text-lg font-semibold text-[#36668b] mb-3'>OUR APPROACH</h2>
+        <h1 className='text-2xl lg:text-4xl font-extrabold leading-tight text-[#36668b]'>
           We equip you with the right tools to help you excel in this ever-changing digital landscape.
         </h1>
       </div>

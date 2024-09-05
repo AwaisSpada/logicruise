@@ -4,16 +4,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const logos = [
-  'https://Logicruise.com/wp-content/uploads/2023/10/Ads.svg',
-  'https://Logicruise.com/wp-content/uploads/2023/10/iecl.svg',
-  'https://Logicruise.com/wp-content/uploads/2023/05/gewch.svg',
-  'https://Logicruise.com/wp-content/uploads/2023/05/make-the-dot-1.svg',
-  'https://Logicruise.com/wp-content/uploads/2023/10/Solaire.svg'
+  'upwork',
+  'linkedin',
+  'facebook',
+  'instagram',
 ];
 
 const SlideItem = ({ index }) => (
-  <div className="flex items-center justify-center h-20 bg-blue-800 mx-auto p-4">
-    <img src={logos[index % logos.length]} alt={`Logo ${index + 1}`} className="max-h-12 max-w-full" />
+  <div className="slider-logo flex items-center justify-center text-5xl text-white mx-2 lg:mx-4">
+    <i className={`fa-brands fa-${logos[index % logos.length]}`}></i>
   </div>
 );
 
@@ -49,7 +48,7 @@ const Services = () => {
   return (
     <div className='bg-white text-gray-800'>
       <div className="text-center mt-20 px-5">
-        <h4 className="text-blue-500 font-bold text-xs sm:text-sm md:text-base lg:text-lg mb-2">
+        <h4 className="text-[#36668b] font-bold text-xs sm:text-sm md:text-base lg:text-lg mb-2">
           T H O U G H T S &nbsp; A N D &nbsp; B L O G S
         </h4>
         <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-4'>
@@ -64,7 +63,7 @@ const Services = () => {
           <h5 className='text-gray-600 text-base lg:text-lg'>
             MARKETING SOLUTIONS PROVIDER
           </h5>
-          <h2 className='text-4xl sm:text-5xl font-extrabold text-blue-500 mt-5'>
+          <h2 className='text-4xl sm:text-5xl font-extrabold text-[#36668b] mt-5'>
             We’re a leader in digital <br /> marketing solutions
           </h2>
         </div>
@@ -74,9 +73,9 @@ const Services = () => {
           </p>
         </div>
       </div>
-      <div className='mx-auto mt-40 text-blue-500 font-bold'>
-        <h5 className='font-semibold mb-10 text-center'>OUR CLIENTS</h5>
-        <div id='slider' className="mx-auto w-full bg-blue-800">
+      <div className='mx-auto mt-40 text-[#36668b] font-bold'>
+        <h5 className='font-bold mb-10 text-center'>OUR CLIENTS</h5>
+        <div id='slider' className="mx-auto w-full bg-[#36668b] p-5">
           <Slider {...settings}>
             {[...Array(8).keys()].map((_, index) => (
               <SlideItem key={index} index={index} />

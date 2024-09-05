@@ -11,7 +11,8 @@ import bgvid from '../assets/bgvid.mp4'
 const logos = [
   'upwork',
   'linkedin',
-  'facebook'
+  'facebook',
+  'instagram',
 ];
 
 const SlideItem = ({ index }) => (
@@ -71,7 +72,6 @@ const Hero = () => {
         <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-        <div className='absolute inset-0 bg-black bg-opacity-50'></div>
         <div className='relative z-10 flex flex-col items-center justify-center h-full px-4'>
           <h5 id='text' className='text-center text-white font-bold lg:text-6xl md:text-4xl text-3xl opacity-0 mt-20'>
             Navigating Your Digital Future
@@ -79,7 +79,7 @@ const Hero = () => {
           <h1 id='text' className='circle-text relative text-center mb-10 font-semibold text-white mt-5 opacity-0'>
             Revolutionize
           </h1>
-          <h6 id='text' className='text-center text-blue-400 font-bold opacity-0 lg:text-4xl md:text-3xl text-2xl'>
+          <h6 id='text' className='text-center text-[#36668b] font-bold opacity-0 lg:text-4xl md:text-3xl text-2xl'>
             Crafting Digital Excellence with Precision and Innovation.
           </h6>
           <h1 id='text' className="text-center text-3xl text-white font-semibold mt-5">

@@ -10,7 +10,7 @@ import Doubts from './Components/Doubts'
 import Footer from './Components/Footer'
 import AboutHero from './Pages/About/Hero'
 import AboutMain from './Pages/About/Main'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useParams } from 'react-router-dom'
 import Values from './Pages/About/Values'
 import AboutServices from './Pages/About/Services'
 import Team from './Pages/About/Team'
@@ -21,6 +21,7 @@ import Choose from './Components/Choose'
 import ScrollToTop from '../ScrollToTop';
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
+import { Link } from 'react-scroll'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
      <Routes>
       <Route path='/' element={
         <>
+    <Link to='home' smooth={true} duration={1500} className='bg-[#36668b] cursor-pointer text-white border-2 border-white z-20 p-2 px-[15px] rounded-full fixed right-5 top-[600px]'><i className='fa fa-arrow-up'></i></Link>
       <Hero/>
       <MainCard/>
       <Choose/>
@@ -46,6 +48,7 @@ function App() {
         </>
       }/>
       <Route path='/about' element={<>
+    <Link to='about' smooth={true} duration={1500} className='bg-[#36668b] cursor-pointer text-white border-2 border-white z-20 p-2 px-[15px] rounded-full fixed right-5 top-[600px]'><i className='fa fa-arrow-up'></i></Link>
         <AboutHero/>
         <AboutMain/>
         <Values/>

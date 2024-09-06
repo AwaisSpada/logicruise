@@ -220,11 +220,7 @@ button:hover{
   z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .hero > * {
-    padding: 0 1rem; /* Add padding for smaller screens */
-  }
-}
+
 .hero h1 {
   font-size: 2.5rem; /* Adjust font size for smaller screens */
 }
@@ -232,10 +228,6 @@ button:hover{
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.5rem; /* Adjust font size for smaller screens */
-  }
-  .hero{
-    background-image: none;
-    background-color: #0e1627e6;
   }
 }
 

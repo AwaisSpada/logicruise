@@ -14,12 +14,12 @@ const Hero = () => {
   }, []);
   return (
     <Element name='about'>
-      <div className='hero relative w-full lg:h-screen bg-cover bg-center px-24'>
+      <div className='hero relative w-full h-screen bg-cover bg-center lg:px-24'>
       <video autoPlay muted loop className="background-video">
         <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-        <div className="text-center top-20">
+        <div className="text-center top-24">
           <h4 id='text' className="text-[#36668b] font-semibold text-sm sm:text-base lg:text-lg mb-2">
             T H O U G H T S &nbsp; A N D &nbsp; B L O G S
           </h4>

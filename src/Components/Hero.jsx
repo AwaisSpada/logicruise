@@ -43,13 +43,13 @@ const settings = {
     {
       breakpoint: 768,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 4,
       }
     },
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 3,
       }
     }
   ]
@@ -67,7 +67,7 @@ const Hero = () => {
 
   return (
     <Element name='home'>
-      <div id='background-video-container' className='hero relative w-full lg:h-screen bg-cover bg-center'>
+      <div id='background-video-container' className='hero relative w-full h-screen bg-cover bg-center'>
       <video autoPlay muted loop className="background-video">
         <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.

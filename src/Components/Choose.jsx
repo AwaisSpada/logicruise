@@ -84,7 +84,7 @@ const Choose = () => {
     }, [inView]);
 
     return (
-        <div id='choose' ref={ref} className='bg-gray-800 mt-28 md:p-20 p-10 opacity-0'>
+        <div id='choose' ref={ref} className='bg-gray-800 mt-28 md:p-20 p-3 opacity-0'>
             <div className='container mx-auto text-white'>
                 <div className='lg:flex lg:gap-12 flex-col-reverse lg:flex-row'>
                     <div className="left lg:w-1/2">
@@ -97,7 +97,7 @@ const Choose = () => {
                         </Link>
                     </div>
                     <div id='choose4' className="right lg:w-1/2 mt-6 lg:mt-0">
-                        <div className='flex flex-wrap gap-4 mb-4 md:mb-6'>
+                        <div className='flex flex-wrap lg:gap-4 gap-1 mb-4 md:mb-6'>
                             {buttons.map((label, index) => (
                                 <button
                                     key={index}

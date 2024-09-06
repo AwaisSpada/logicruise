@@ -123,7 +123,7 @@ const Navbar = () => {
                 sx={{ display: { xs: 'block', md: 'none' } }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Button onClick={handleHomeClick} sx={{ color: 'inherit', textAlign: 'center' }}>
+                  <Button onClick={handleHomeClick} sx={{ color: 'inherit', marginLeft: '-13px', fontSize: '12px'}}>
                     Home
                   </Button>
                 </MenuItem>
@@ -138,8 +138,8 @@ const Navbar = () => {
             </Box>
 
             {/* Logo for mobile view */}
-            <Box sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}>
-              <img src={logo} alt="Logo" style={{ height: '100px' }} />
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+              <img src={logo} alt="Logo" style={{ height: '100px', marginLeft: '20px' }} />
             </Box>
             <Typography
               variant="h5"
@@ -147,7 +147,6 @@ const Navbar = () => {
               component="a"
               href="#app-bar-with-responsive-menu"
               sx={{
-                mr: 2,
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',

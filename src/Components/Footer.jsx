@@ -2,11 +2,11 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='bg-gray-800 mt-40 text-white rounded-t-[50px] pt-10 px-5'>
+    <div className='bg-gray-800 mt-36 text-white rounded-t-[50px] pt-10 px-5'>
     <div className='text-white'>
     <div className='lg:flex justify-around font-medium lg:gap-[200px] text-xl lg:my-10'>
     <h1 className='text-center mb-10'>SOLUTIONS</h1>
-    <div className='flex justify-between'>
+    <div className='flex justify-between items-center'>
         <h5 className='mr-4'>FOLLOW US</h5>
         <div>
         <button class="bg-black p-[10px] rounded-full ml-1 font-semibold text-white inline-flex items-center space-x-2 rounded">
@@ -31,17 +31,17 @@ const Footer = () => {
       </div>
     </div>
     </div>
-    <div className='grid lg:grid-cols-3 grid-cols-3 text-sm lg:text-normal lg:my-0 my-10 gap-4 lg:w-[84%] lg:ml-auto'>
+    <div className='grid lg:grid-cols-3 grid-cols-3 text-sm lg:text-normal lg:my-0 my-10 gap-4 lg:w-[85.2%] lg:ml-auto'>
         <a href="/">Custom Software Development</a>
         <a href="/">Web Development</a>
         <a href="/">Mobile App Development</a>
         <a href="/">UI/UX Design</a>
         <a href="/">SAAS Development</a>
-        <a className='lg:text-right lg:w-[40%]' href="/">IT Outsourcing</a>
+        <a href="/">IT Outsourcing</a>
     </div>
     </div>
-      <hr className='my-4 border-black border lg:w-[70%] mx-auto' />
-      <div className='lg:flex justify-around mt-5 lg:w-[90%] mx-auto'>
+      <hr className='my-4 border-black border lg:w-[71%] mx-auto' />
+      <div className='lg:flex justify-around gap-14 mt-5 lg:w-[100%] mx-auto'>
         <div className='flex gap-4 justify-between my-5 lg:my-0'>
             <p>Created by</p>
             <a href="/">@sunalsood</a>

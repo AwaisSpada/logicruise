@@ -81,10 +81,10 @@ const Contact = () => {
         </div>
         </div>
         <h2 className='text-xl font-bold'>What happens next?</h2>
-            <div className='mt-5 text-md flex flex-row justify-between gap-[10%] lg:px-0 px-1'>
-            <h5 className='w-[20%] relative'><span className='text-2xl absolute top-5 left-[-25px] font-bold'>1</span> We Schedule a call at your convenience. </h5>
-            <h5 className='w-[20%] relative'><span className='text-2xl absolute top-5 left-[-25px] font-bold'>2</span> We do a consulting meeting.</h5>
-            <h5 className='w-[20%] relative'><span className='text-2xl absolute top-5 left-[-25px] font-bold'>3</span> We prepare a proposal. </h5>
+            <div className='mt-5 text-md flex flex-row gap-1 lg:px-0 px-1'>
+            <h5 className='relative flex flex-col text-left md:text-lg text-xs'><span className='text-xl font-bold mb-2'>1</span> We Schedule a call at your convenience. </h5>
+            <h5 className='relative flex flex-col text-left md:text-lg text-xs'><span className='text-xl font-bold mb-2'>2</span> We do consulting meeting.</h5>
+            <h5 className='relative flex flex-col text-left md:text-lg text-xs'><span className='text-xl font-bold mb-2'>3</span> We prepare a proposal. </h5>
             </div>
       </div>
       <div className='block lg:mt-0 mt-5 lg:w-[45%] text-black bg-white py-10 lg:px-16 px-5 rounded-3xl'>

@@ -91,7 +91,7 @@ const Hero = () => {
           <h1 id='text' className='circle-text relative text-center mb-10 font-semibold text-white mt-5 opacity-0'>
             Revolutionize
           </h1>
-          <h6 id='text' className='text-center text-[#36668b] font-bold opacity-0 lg:text-4xl md:text-3xl text-2xl'>
+          <h6 id='text' className='gradientText text-center font-bold opacity-0 lg:text-4xl md:text-3xl text-2xl'>
             Crafting Digital Excellence with Precision and Innovation.
           </h6>
           <h1 id='text' className="text-center text-3xl text-white font-semibold mt-5">

@@ -20,8 +20,8 @@ const AboutMe = () => {
           We design innovative web and mobile experiences across multiple platforms, from TVs to iPads. Our experience spans small agencies to medium-sized companies, including a significant stint with Toppr, India’s major Ed-Tech startup acquired by Byjus. Currently, we craft aesthetic and functional solutions for smallcase, enhancing financial accessibility and understanding for Indian users.
         </p>
         <Link to="/about">
-          <button className='mt-5 px-6 py-3 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-600 transition duration-300 ease-in-out'>
-            Learn More &#8594;
+          <button className='mt-5 px-6 py-3 flex items-center gap-2 border text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out [&>i]:transition [&>i]:duration-300 [&>i]:ease-in-out [&>i]:hover:rotate-[-60deg]'>
+            Learn More <i className='fa fa-arrow-right mt-1'></i>
           </button>
         </Link>
       </div>

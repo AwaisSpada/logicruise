@@ -6,30 +6,45 @@ const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
     {
-      one: "Syed is one of the best, hard-working, passionate, and respectful people you can work with on Fiverr. His work was exceptional, providing amazing work on a platform he was somewhat unfamiliar with which utilised the Chrome CEF. Second, the work was done blazing fast which was unexpected for the amount of work. Third, his prices beat almost everyone on the market, and for the quality of work I wouldn’t have been surprised if he charged much more. Fourth and final point, Syed’s timelines were unbeatable. He wanted to have meetings every day to discuss his progress and so that he could do revisions as we go, which even I couldn’t keep up with. If you need React development, go with Syed!",
+      one: "Logicruise is one of the best, hard-working, passionate, and respectful companies you can work with on Fiverr. Their work was exceptional, providing amazing results on a platform they were somewhat unfamiliar with, which utilized the Chrome CEF. Second, the work was done blazing fast, which was unexpected for the amount of work. Third, their prices beat almost everyone on the market, and for the quality of work, I wouldn't have been surprised if they charged much more. Fourth and final point, Logicruise’s timelines were unbeatable. They wanted to have meetings every day to discuss progress and make revisions as we went, which even I couldn't keep up with. If you need React development, go with Logicruise!",
       tow: "abdu_sizz",
-      three: "EG Egypt"
+      three: "Egypt"
     },
     {
-      one: "Exceptional delivery, work was done as discussed and met my expectations. Amazing work and an amazing guy to work with. Definitely recommended",
-      tow: "huzaifax1",
-      three: "CA Canada"
+      one: "Exceptional delivery, work was done as discussed and met my expectations. Amazing work and an amazing guy to with. Definitely recommended",
+      tow: "huzaifax",
+      three: "Canada"
     },
     {
-      one: "Syed is very cooperative and well-behaved, demonstrating great dedication to the project. He delivered exceptional, high-quality work.",
+      one: "Logicruise is very cooperative and well-behaved company, demonstrating great dedication to the project. They delivered exceptional, high-quality work.",
       tow: "t11ger",
-      three: "GB United Kingdom"
+      three: "United Kingdom"
     },
     {
       one: "Delivered as per the discussion and recommendations. Absolutely recommended",
-      tow: "huzaifax1",
-      three: "CA Canada"
+      tow: "huzaifax",
+      three: "Canada"
     },
     {
-      one: "Excellent work, just as I expected. His dedication to completing the project within the timeline is truly commendable and greatly appreciated.",
-      tow: "saadmehmood09",
-      three: "PK Pakistan"
+      one: "Excellent work, just as I expected. Their dedication to completing the project within the timeline is truly commendable and greatly appreciated.",
+      tow: "saadmehmood",
+      three: "Pakistan"
     },
+    {
+      one:  "When you work with Logicruise you are working with a group of professionals who ensure they will understand the requirements and make any necessary adjustments to their work to deliver the job as expected. Even though they are new sellers, and sometimes have to discount their services because they are new in Fiverr, I'm sure they will build top ranking quickly. I will come back to them for new jobs. Thank you",
+      tow: "rad_works",
+      three: "United States"
+    },
+    {
+      one: "Seller did their Best ,very much pleased highly appreciated their efforts and understanding. delivered my project even before deadline, speedy and accurate working.",
+      tow: "zahreemsyed",
+      three: "Australia"
+    },
+    {
+      one: "Excellent work! Awais worked fast and kept the code in top quality, just like I wanted",
+      tow: "salman7586",
+      three: "United Kingdom"
+    }
   ];
 
   const handleNext = () => {

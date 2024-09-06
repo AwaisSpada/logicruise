@@ -164,8 +164,8 @@ const Main = () => {
                     </>
                   )}
                 </p>
-                <button className="bg-blue-500 py-2 px-4 mt-5 rounded-lg hover:bg-blue-600 transition duration-300">
-                  View Case Study <span>&#8599;</span>
+                <button className="py-2 border flex items-center gap-2 px-4 mt-5 rounded-lg transition duration-300 transition [&>i]:hover:rotate-[-40deg] [&>i]:transition [&>i]:all [&>i]:duration-50">
+                  View Case Study <i className="fa fa-arrow-right mt-1"></i>
                 </button>
               </div>
               <img

@@ -48,7 +48,7 @@ function App() {
         </>
       }/>
       <Route path='/about' element={<>
-    <Link to='about' smooth={true} duration={1500} className='bg-[#36668b] cursor-pointer text-white border-2 border-white z-20 p-2 px-[15px] rounded-full fixed right-5 top-[90vh]'><i className='fa fa-arrow-up'></i></Link>
+    <Link to='ABOUT' smooth={true} duration={1500} className='bg-[#36668b] cursor-pointer text-white border-2 border-white z-20 p-2 px-[15px] rounded-full fixed right-5 top-[90vh]'><i className='fa fa-arrow-up'></i></Link>
         <AboutHero/>
         <AboutMain/>
         <Values/>

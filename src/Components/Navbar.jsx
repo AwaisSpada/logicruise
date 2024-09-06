@@ -161,12 +161,13 @@ const Navbar = () => {
 
             {/* Desktop Menu Items Centered */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center', gap: '50px' }}>
-              <Button onClick={handleHomeClick} sx={{ my: 2, color: 'white', display: 'block' }}>
+              <Button className='navlinks' onClick={handleHomeClick} sx={{ my: 2, color: 'white', display: 'block' }}>
                 Home
               </Button>
               {pages.map((page) => (
                 <Link key={page} to={page} smooth={true} duration={1000}>
                   <Button
+                  className='navlinks'
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
@@ -178,7 +179,7 @@ const Navbar = () => {
 
             {/* Call to Action */}
             <Box sx={{ flexGrow: 0 }}>
-              <Link to='contact' smooth={true} duration={1000}>
+              <Link to='CONTACT' smooth={true} duration={1000}>
                 <Box
                   component="button"
                   sx={{

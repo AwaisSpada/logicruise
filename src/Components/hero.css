@@ -262,3 +262,34 @@ body{
   z-index: -1;
   pointer-events: none;
 }
+
+
+.gradientText{
+  background: linear-gradient(to right, #d1d8de, #3182a2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navlinks{
+  border: none;
+  position: relative;
+}
+.navlinks:hover{
+  border: none;
+  color: white;
+
+}
+
+.navlinks::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  transition: all ease 0.5s;
+  left: 0;
+}
+.navlinks:hover::after{
+  width: 100%;
+}

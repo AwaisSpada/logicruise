@@ -99,11 +99,9 @@ const Testimonials = () => {
             <div key={index} className="px-2">
               <div className={`bg-gray-800 rounded-xl text-gray-200 p-6 flex flex-col justify-between h-[300px] transition-transform transform hover:scale-95 hover:shadow-xl ${slide.one.length > 500 ? 'scrollable' : 'no-scroll'}`}>
                 <div className="flex items-center mb-4 relative">
-                  <img
-                    className="w-12 h-12 rounded-full mr-4 transition-transform duration-300 ease-in-out hover:scale-130 border border-[black]/20 p-1"
-                    src="https://framerusercontent.com/images/8eQdoLnUaYcMtkByFREYQUOFBtU.png"
-                    alt="User Avatar"
-                  />
+                  <h1 className='border-2 px-3 py-[5px] rounded-full mr-4'>
+                    {slide.tow.slice(0, 1).toUpperCase()}
+                  </h1>
                   <div>
                     <h5 className="text-xl font-semibold">{slide.tow}</h5>
                     <p className="text-sm text-gray-400">{slide.three}</p>

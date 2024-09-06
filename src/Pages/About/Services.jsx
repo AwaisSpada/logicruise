@@ -2,17 +2,23 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import linkedin from '../../assets/Linkdin.png'
+import guru from '../../assets/guru.png'
+import fiver from '../../assets/fiver.png'
+import freelancer from '../../assets/Freelancer.png'
+import upwork from '../../assets/Upwork.png'
 
 const logos = [
-  'upwork',
-  'linkedin',
-  'facebook',
-  'instagram',
+  linkedin,
+  guru,
+  fiver,
+  freelancer,
+  upwork
 ];
 
 const SlideItem = ({ index }) => (
-  <div className="slider-logo flex items-center justify-center text-5xl text-white mx-2 lg:mx-4">
-    <i className={`fa-brands fa-${logos[index % logos.length]}`}></i>
+  <div className="slider-logo flex items-center justify-center text-2xl text-white mx-2 lg:mx-4">
+    <img width={'150px'} src={`${logos[index % logos.length]}`} alt="" />
   </div>
 );
 
@@ -75,7 +81,7 @@ const Services = () => {
       </div>
       <div className='mx-auto mt-40 text-[#36668b] font-bold'>
         <h5 className='font-bold mb-10 text-center'>OUR CLIENTS</h5>
-        <div id='slider' className="mx-auto w-full bg-[#36668b] p-5">
+        <div id='slider' className="mx-auto w-full bg-[#36668b]">
           <Slider {...settings}>
             {[...Array(8).keys()].map((_, index) => (
               <SlideItem key={index} index={index} />

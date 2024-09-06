@@ -34,10 +34,10 @@ const Footer = () => {
     <div className='grid lg:grid-cols-3 grid-cols-3 text-sm lg:text-normal lg:my-0 my-10 gap-4 lg:w-[85.2%] lg:ml-auto'>
         <a href="/">Custom Software Development</a>
         <a href="/">Web Development</a>
-        <a href="/">Mobile App Development</a>
+        <a className='ml-7' href="/">Mobile App Development</a>
         <a href="/">UI/UX Design</a>
         <a href="/">SAAS Development</a>
-        <a href="/">IT Outsourcing</a>
+        <a className='ml-7' href="/">IT Outsourcing</a>
     </div>
     </div>
       <hr className='my-4 border-black border lg:w-[71%] mx-auto' />
@@ -49,8 +49,8 @@ const Footer = () => {
         </div>
         <div className='flex justify-between lg:gap-6 lg:my-0 pb-4'>
             <a href="/">Facebook</a>
-            <a href="/">Linkedin</a>
-            <a href="/">Instagram</a>
+            <a className='mr-5 md:mr-0' href="/">Linkedin</a>
+            <a className='mr-9 md:mr-0' href="/">Instagram</a>
         </div>
       </div>
     </div>

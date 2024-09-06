@@ -4,20 +4,26 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Typewriter from 'typewriter-effect';
 import { Element } from 'react-scroll';
-import './hero.css'; // Ensure this file has appropriate styles
+import './hero.css';
 import { gsap, Power4 } from 'gsap';
-import bgvid from '../assets/bgvid.mp4'
+import bgvid from '../assets/bgvid.mp4';
+import linkedin from '../assets/Linkdin.png'
+import guru from '../assets/guru.png'
+import fiver from '../assets/fiver.png'
+import freelancer from '../assets/Freelancer.png'
+import upwork from '../assets/Upwork.png'
 
 const logos = [
-  'upwork',
-  'linkedin',
-  'facebook',
-  'instagram',
+  linkedin,
+  guru,
+  fiver,
+  freelancer,
+  upwork
 ];
 
 const SlideItem = ({ index }) => (
-  <div className="slider-logo flex items-center justify-center text-5xl text-white mx-2 lg:mx-4">
-    <i className={`fa-brands fa-${logos[index % logos.length]}`}></i>
+  <div className="slider-logo flex items-center justify-center text-2xl text-white mx-2 lg:mx-4">
+    <img width={'150px'} src={`${logos[index % logos.length]}`} alt="" />
   </div>
 );
 
@@ -38,21 +44,21 @@ const settings = {
       breakpoint: 1024,
       settings: {
         slidesToShow: 4,
-      }
+      },
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 4,
-      }
+      },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 3,
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
 
 const Hero = () => {
@@ -68,10 +74,16 @@ const Hero = () => {
   return (
     <Element name='home'>
       <div id='background-video-container' className='hero relative w-full h-screen bg-cover bg-center'>
-      <video autoPlay muted loop className="background-video">
-        <source src={bgvid} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="background-video"
+        >
+          <source src={bgvid} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className='relative z-10 flex flex-col items-center justify-center h-full px-4'>
           <h5 id='text' className='text-center text-white font-bold lg:text-6xl md:text-4xl text-3xl opacity-0 mt-20'>
             Navigating Your Digital Future

@@ -13,9 +13,14 @@ const Hero = () => {
     gsap.fromTo('#slider', { y: 40, opacity: 0 }, { duration: 3, y: 0, ease: Power4.easeInOut, opacity: 1 });
   }, []);
   return (
-    <Element name='about'>
-      <div className='hero relative w-full h-screen bg-cover bg-center lg:px-24'>
-      <video autoPlay muted loop className="background-video">
+    <Element name='ABOUT'>
+      <div id='background-video-container' className='hero relative w-full h-screen bg-cover bg-center lg:px-24'>
+      <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="background-video">
         <source src={bgvid} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

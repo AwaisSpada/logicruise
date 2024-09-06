@@ -41,7 +41,7 @@ const Reviews = () => {
   };
 
   return (
-    <Element name="ratings">
+    <Element name="RATINGS">
       <div className="bg-white text-gray-700">
       <div className="text-center mb-10 mt-20">
         <h4 className="text-gray-500 text-sm font-bold">

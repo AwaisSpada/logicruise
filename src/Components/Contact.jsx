@@ -62,8 +62,8 @@ const Contact = () => {
     sendEmail(event);
   };
   return (
-    <Element name="contact">
-      <div className='lg:flex justify-center bg-black text-white pt-20 pb-40 mt-40 rounded-t-[50px] lg:px-20 px-5 mb-[-200px]'>
+    <Element name="CONTACT">
+      <div className='lg:flex justify-center bg-black text-white pt-20 pb-40 mt-40 rounded-t-[40px] lg:px-20 px-5 mb-[-200px]'>
       <div className='lg:w-[45%]'>
         <h1 className='font-bold text-5xl'>Partner With us & Get Your Quote</h1>
         <h5 className='text-xl my-5'>When you partner with Logicruise, we take care of the heavy lifting, so you can enjoy more website traffic, leads, and revenue.</h5>

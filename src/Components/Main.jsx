@@ -91,7 +91,7 @@ const Main = () => {
   const getTopValue = (index) => `${(index + 1) * 90}px`;
 
   return (
-    <Element name="work">
+    <Element name="WORK">
       <div className="bg-gray-800 py-16">
         <div
           ref={ref}
@@ -106,7 +106,7 @@ const Main = () => {
           <h1 className="text-3xl lg:text-5xl font-bold text-white mt-3">
             Featured Case Studies
           </h1>
-          <p className="text-gray-400 text-lg mt-2">
+          <p className="text-gray-400 text-lg mt-2 px-5">
             Compilation of case studies that evoke my sense of pride
           </p>
         </div>

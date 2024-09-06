@@ -4,7 +4,7 @@ import {Element} from 'react-scroll'
 
 const AboutMe = () => {
   return (
-    <Element name="about">
+    <Element name="ABOUT">
     <div className='flex flex-col mt-10 lg:flex-row items-center lg:justify-center gap-10 lg:gap-20 px-5 lg:px-20 py-10 lg:py-20 bg-gray-700'>
       <div className='flex-1 max-w-lg'>
         <h4 className='text-white text-sm font-semibold uppercase'>

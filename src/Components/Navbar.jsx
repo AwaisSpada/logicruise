@@ -15,7 +15,7 @@ import { useScroll } from './useScroll';
 // import logo from '../assets/logo.png'
 import logo from '../assets/1.svg'
 
-const pages = ['work', 'about', 'ratings', 'contact'];
+const pages = ['WORK', 'ABOUT', 'RATINGS', 'CONTACT'];
 
 const Navbar = () => {
   const { scrollDirection, hasScrolled } = useScroll();
@@ -123,7 +123,7 @@ const Navbar = () => {
                 sx={{ display: { xs: 'block', md: 'none' } }}
               >
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Button onClick={handleHomeClick} sx={{ color: 'inherit', marginLeft: '-13px', fontSize: '12px'}}>
+                  <Button onClick={handleHomeClick} sx={{ color: 'inherit', marginLeft: '-10px', fontSize: '15px'}}>
                     Home
                   </Button>
                 </MenuItem>

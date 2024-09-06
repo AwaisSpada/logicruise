@@ -81,7 +81,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-gray-700 text-white py-20">
+    <div className="bg-gray-700 text-white py-20 px-5">
       <div className="text-center mb-16">
         <h4 className="text-blue-400 font-bold text-xs uppercase">
           T E S T I M O N I A L &nbsp; O F &nbsp; F E W &nbsp; F O L K S
@@ -97,7 +97,7 @@ const Testimonials = () => {
         <Slider {...settings}>
           {slides.map((slide, index) => (
             <div key={index} className="px-2">
-              <div className={`bg-gray-800 rounded-lg text-gray-200 p-6 flex flex-col justify-between h-[400px] transition-transform transform hover:scale-95 hover:shadow-xl ${slide.one.length > 500 ? 'scrollable' : 'no-scroll'}`}>
+              <div className={`bg-gray-800 rounded-xl text-gray-200 p-6 flex flex-col justify-between h-[300px] transition-transform transform hover:scale-95 hover:shadow-xl ${slide.one.length > 500 ? 'scrollable' : 'no-scroll'}`}>
                 <div className="flex items-center mb-4 relative">
                   <img
                     className="w-12 h-12 rounded-full mr-4 transition-transform duration-300 ease-in-out hover:scale-130 border border-[black]/20 p-1"

@@ -72,11 +72,13 @@ nav.bg-gray-700 {
 .shadowpic{
   filter: drop-shadow(0px 0px 1px white);
 }
+button{
+}
 
 button:hover{
   background-color: transparent;
-  border: 1px solid #36668b;
-  color: #36668b;
+  border: 1px solid rgb(34, 139, 188);
+  color: rgb(82, 131, 157);
   transition: all ease-in-out 1s;
   transition: all ease 0.2s;
   scale: 1.1;
@@ -247,6 +249,7 @@ body{
   width: 100%;
   height: 100vh; /* Adjust as needed */
   overflow: hidden;
+  pointer-events: none;
 }
 
 .background-video {
@@ -257,4 +260,5 @@ body{
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  pointer-events: none;
 }

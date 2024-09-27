@@ -22,6 +22,7 @@ import ScrollToTop from '../ScrollToTop';
 import Approach from './Components/Approach'
 import Reviews from './Components/Reviews'
 import { Link } from 'react-scroll'
+import NotFound from './Components/NotFound'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
      <Navbar/>
      <ScrollToTop />
      <Routes>
+     <Route path='*' element={<NotFound/>}/>
       <Route path='/' element={
         <>
     <Link to='home' smooth={true} duration={1500} className='bg-[#36668b] cursor-pointer text-white border-2 border-white z-20 p-2 px-[15px] rounded-full fixed right-5 top-[90vh]'><i className='fa fa-arrow-up'></i></Link>

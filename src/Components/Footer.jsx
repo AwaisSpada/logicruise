@@ -5,7 +5,7 @@ const Footer = () => {
     <div className='bg-gray-800 mt-36 text-white rounded-t-[50px] pt-10 px-5'>
     <div className='text-white'>
     <div className='lg:flex justify-around font-medium lg:gap-[200px] text-xl lg:my-10'>
-    <h1 className='text-center mb-10'>SOLUTIONS</h1>
+    <h1 className='text-center mt-1'>SOLUTIONS</h1>
     <div className='flex justify-between items-center'>
         <h5 className='mr-4'>FOLLOW US</h5>
         <div>

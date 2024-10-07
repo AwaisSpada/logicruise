@@ -68,7 +68,7 @@ const Reviews = () => {
       </div>
       
       <div className="flex flex-col items-center md:flex-row md:justify-center gap-10 md:gap-10 lg:gap-20 p-5 w-full mx-auto">
-  <div className='flex flex-col items-center md:flex-row md:justify-center gap-10 md:gap-10 lg:gap-20 lg:ml-2'>
+  <div className='flex flex-col items-center md:flex-row md:justify-center gap-10 md:gap-10 lg:gap-[60px] lg:ml-2'>
   <div className="flex flex-col items-center">
     <div className="border border-gray-700 p-5 w-40 rounded-full mx-auto">
       <h2 className="border border-gray-300 p-14 rounded-full text-4xl text-center font-bold relative">
